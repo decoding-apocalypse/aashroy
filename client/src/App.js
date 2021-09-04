@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
+const Developer = lazy(() => import("./pages/Developer"));
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home title="Home | Aashroy" />
+          </Route>
+
+          <Route exact path="/developer">
+            <Developer title="Developer | Aashroy" />
           </Route>
         </Switch>
       </div>
