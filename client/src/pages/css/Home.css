@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#carousel {
+    color: red;
+    text-transform: capitalize;
+    background-color: rgba(153, 149, 149, 0.795);
+    height: 30vh;
+
+}
+
+.break-line {
+    background-color: black;
+    height: 2px;
+    width: 100vw;
+}
+
+#home-map {
+    background-color: rgba(255, 83, 83, 0.295);
+    height: 70vh;
+}
+
+#upload-png {
+    height: 40px;
+}
+
+#upload-img {
+    padding: 10px 0 10px 0;
+}
+
+footer {
+    background-color: black;
+    height: 25vh;
+}
