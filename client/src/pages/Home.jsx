@@ -8,7 +8,7 @@ const Home = (props) => {
   }, [props.title]);
   return (
     <main className="Home">
-      <h1>Landing Page of Aashroy</h1>
+      <h1 className="maintext">Landing Page of Aashroy</h1>
     </main>
   );
 };
