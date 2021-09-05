@@ -12,15 +12,23 @@ import Loader from "./components/Loader";
 const Home = lazy(() => import("./pages/Home"));
 const Developer = lazy(() => import("./pages/Developer"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Publicaware = lazy(() => import("./pages/Publicaware"));
+
 
 function App() {
   return (
     <Suspense fallback={<Loader />}>
       <div className="App">
         <Switch>
+
           <Route exact path="/">
             <Home title="Home | Aashroy" />
           </Route>
+
+          <Route exact path="/publicaware">
+            <Publicaware title="Public Awareness | Aashroy" />
+          </Route>
+          
 
           <Route exact path="/developer">
             <Developer title="Developer | Aashroy" />
