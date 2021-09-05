@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
 const Developer = lazy(() => import("./pages/Developer"));
+const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
 
           <Route exact path="/developers">
             <Developer title="Developers | Aashroy" />
+          </Route>
+
+          <Route path="/">
+            <Error404 title="Oops Error | Aashroy" />
           </Route>
         </Switch>
         <Footer />

@@ -4,12 +4,12 @@ import "./css/Navbar.css";
 
 const Navbar = (props) => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         AASHROY
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -17,34 +17,33 @@ const Navbar = (props) => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              <span class="hover-anim">Home</span>
-              <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <a className="nav-link" href="/">
+              <span className="hover-anim">Home</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="hover-anim">About Us</span>
+          <li className="nav-item">
+            <a className="nav-link" href="/about">
+              <span className="hover-anim">About Us</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="hover-anim">Donation</span>
+          <li className="nav-item">
+            <a className="nav-link" href="/donation">
+              <span className="hover-anim">Donation</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="hover-anim">Public Awareness</span>
+          <li className="nav-item">
+            <a className="nav-link" href="/public-awareness">
+              <span className="hover-anim">Public Awareness</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/developers">
-              <span class="hover-anim">Developers</span>
+          <li className="nav-item">
+            <a className="nav-link" href="/developers">
+              <span className="hover-anim">Developers</span>
             </a>
           </li>
         </ul>
