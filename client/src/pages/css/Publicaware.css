@@ -1,0 +1,28 @@
+.carousel-inner{
+    height: 70vh;
+    background-color: rgb(247, 199, 45);
+}
+
+.news-card-container{
+    margin: 50px;
+    padding: auto;
+}
+
+.news-card{
+    background-color: royalblue;
+    height: 24rem;
+    width: 45%;
+    margin: 5px;
+    display: inline-block;
+
+}
+
+@media only screen and (max-width: 875px) {
+  .news-card{
+    background-color: royalblue;
+    height: 24rem;
+    width: 80%;
+    margin: 12px;
+}
+
+}
