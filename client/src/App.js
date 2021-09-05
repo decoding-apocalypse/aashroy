@@ -14,6 +14,8 @@ import Footer from "./components/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Publicaware = lazy(() => import("./pages/Publicaware"));
 
 function App() {
   return (
@@ -27,6 +29,14 @@ function App() {
 
           <Route exact path="/developers">
             <Developer title="Developers | Aashroy" />
+          </Route>
+
+          <Route exact path="/public-awareness">
+            <Publicaware title="Public Awareness | Aashroy" />
+          </Route>
+
+          <Route exact path="/about">
+            <AboutUs title="AboutUs | Aashroy" />
           </Route>
 
           <Route path="/">
