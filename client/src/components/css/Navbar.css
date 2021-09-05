@@ -1,5 +1,38 @@
-navbar {
-    color: red;
-    text-transform: uppercase;
-    padding: 0 10px 0 10px;
+ * {
+    font-family: 'Handlee', cursive;
+ }
+
+.navbar-brand {
+    padding-right: 60px;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.hover-anim {
+    font-size: 20px;
+    padding: 0 20px 0 20px;
+}
+
+.hover-anim::before {
+    position: absolute;
+    content: "";
+    background-color: #BFA2DB;
+    height: 3px;
+    left: 50%;
+    width: 4.5%;
+    transform: translate(-50%, 0) scaleX(0);
+    bottom: 3px;
+    transition: 0.25s;
+}
+
+.hover-anim:hover::before {
+    width: 90%;
+    transform: translate(-50%, 0) scaleX(1);
 }
