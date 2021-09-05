@@ -7,14 +7,8 @@
     color: red;
     text-transform: capitalize;
     background-color: rgba(153, 149, 149, 0.795);
-    height: 30vh;
+    height: 50vh;
 
-}
-
-.break-line {
-    background-color: black;
-    height: 2px;
-    width: 100vw;
 }
 
 #home-map {

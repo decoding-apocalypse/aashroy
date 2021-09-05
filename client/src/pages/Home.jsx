@@ -24,5 +24,5 @@ const Home = (props) => {
   );
 };
 
-// <div className="break-line"></div>
+
 export default Home;

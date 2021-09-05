@@ -11,6 +11,7 @@ import Loader from "./components/Loader";
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
 const Developer = lazy(() => import("./pages/Developer"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
           <Route exact path="/developer">
             <Developer title="Developer | Aashroy" />
+          </Route>
+
+          <Route exact path="/AboutUs">
+            <AboutUs title="AboutUs | Aashroy" />
           </Route>
         </Switch>
       </div>
