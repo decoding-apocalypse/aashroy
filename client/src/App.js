@@ -7,6 +7,8 @@ import "./App.css";
 
 // Component imports
 import Loader from "./components/Loader";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
@@ -18,6 +20,7 @@ function App() {
   return (
     <Suspense fallback={<Loader />}>
       <div className="App">
+        <Navbar />
         <Switch>
 
           <Route exact path="/">
@@ -29,11 +32,12 @@ function App() {
           </Route>
           
 
-          <Route exact path="/developer">
-            <Developer title="Developer | Aashroy" />
+          <Route exact path="/developers">
+            <Developer title="Developers | Aashroy" />
           </Route>
           
         </Switch>
+        <Footer />
       </div>
     </Suspense>
   );
