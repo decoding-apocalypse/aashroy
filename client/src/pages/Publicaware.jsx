@@ -2,17 +2,12 @@ import React, { useEffect } from "react";
 
 import "./css/Publicaware.css";
 
-// components import
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
 const Publicaware = (props) => {
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
   return (
     <main className="Publicaware">
-      <Navbar />
       <div>
         <div
           id="carouselExampleIndicators"
@@ -79,7 +74,6 @@ const Publicaware = (props) => {
         <div className="news-card"></div>
         <div className="news-card"></div>
       </div>
-      <Footer />
     </main>
   );
 };

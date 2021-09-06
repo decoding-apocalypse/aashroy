@@ -2,17 +2,12 @@ import React, { useEffect } from "react";
 
 import "./css/AboutUs.css";
 
-// components import
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
 const AboutUs = (props) => {
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
   return (
     <main className="AboutUs">
-      <Navbar />
       <div className="about-carousel">
         <div
           id="carouselExampleInterval"
@@ -24,21 +19,21 @@ const AboutUs = (props) => {
               <img
                 src="img/about-4.jpg"
                 class="d-block w-100 about-img"
-                alt="no image"
+                alt="nothing"
               />
             </div>
             <div class="carousel-item" data-bs-interval="2000">
               <img
                 src="img/about-5.jpg"
                 class="d-block w-100 about-img"
-                alt="no image"
+                alt="nothing"
               />
             </div>
             <div class="carousel-item">
               <img
                 src="img/about-6.jpg"
                 class="d-block w-100 about-img"
-                alt="no image"
+                alt="nothing"
               />
             </div>
           </div>
@@ -80,14 +75,16 @@ const AboutUs = (props) => {
           <img src="img/about-card-1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Donation</h5>
-            <p class="card-text">Donate today for a better cause and for serving humanity.</p>
+            <p class="card-text">
+              Donate today for a better cause and for serving humanity.
+            </p>
             <div
               class="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
               <button type="button" class="btn btn-outline-warning">
-                <a href="#">Donate Now</a>
+                <a href="/donate">Donate Now</a>
               </button>
             </div>
           </div>
@@ -95,15 +92,21 @@ const AboutUs = (props) => {
         <div class="about-card-2 ">
           <img src="img/about-card-2.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title"><br />Public Awareness </h5>
-            <p class="card-text">Understand about basic the Human Rights and the need of basic housing.</p>
+            <h5 class="card-title">
+              <br />
+              Public Awareness{" "}
+            </h5>
+            <p class="card-text">
+              Understand about basic the Human Rights and the need of basic
+              housing.
+            </p>
             <div
               class="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
               <button type="button" class="btn btn-outline-warning">
-                <a href="#">Public Awareness</a>
+                <a href="public-awareness">Public Awareness</a>
               </button>
             </div>
           </div>
@@ -112,14 +115,16 @@ const AboutUs = (props) => {
           <img src="img/about-card-3.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Report any illegal activity</h5>
-            <p class="card-text">Report any illegal and suspicious activity in your neighborhood.</p>
+            <p class="card-text">
+              Report any illegal and suspicious activity in your neighborhood.
+            </p>
             <div
               class="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
               <button type="button" class="btn btn-outline-warning">
-                <a href="#"> Report Now</a>
+                <a href="/report"> Report Now</a>
               </button>
             </div>
           </div>
@@ -132,10 +137,10 @@ const AboutUs = (props) => {
           Change only happens when you get involved.
         </div>
       </div>
-      <div className= "about-partners">
-        <div className= "partners-content">
+      <div className="about-partners">
+        <div className="partners-content">
           <h2>Join us in our fight now!</h2>
-          <div className= "about-table-wrapper">
+          <div className="about-table-wrapper">
             <table className="about-ngoList">
               <thead>
                 <tr className="table-heading">
@@ -146,11 +151,17 @@ const AboutUs = (props) => {
                 </tr>
               </thead>
               <tbody>
-              <tr>
+                <tr>
                   <td>1</td>
-                  <td>BRIGHT FUTURE FOR PEOPLES AND RURAL AREA DEVELOPMENT OF ASSAM</td>
-                  <td>Old UBI Bank Building, 2nd floor, Bhuragaon Natun Bazar, P.O. Bhuragaon, P.S. Bhuragaon, MARIGAON, 782121</td>
-                  <td>	9435117309</td>
+                  <td>
+                    BRIGHT FUTURE FOR PEOPLES AND RURAL AREA DEVELOPMENT OF
+                    ASSAM
+                  </td>
+                  <td>
+                    Old UBI Bank Building, 2nd floor, Bhuragaon Natun Bazar,
+                    P.O. Bhuragaon, P.S. Bhuragaon, MARIGAON, 782121
+                  </td>
+                  <td> 9435117309</td>
                 </tr>
                 <tr>
                   <td>2</td>
@@ -166,14 +177,19 @@ const AboutUs = (props) => {
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>A SOCIAL FOR HUMAN RESOURCE ORGANISATION AND IMPROVEMENTS</td>
+                  <td>
+                    A SOCIAL FOR HUMAN RESOURCE ORGANISATION AND IMPROVEMENTS
+                  </td>
                   <td>Rup Nagar, Nalbari Gaon, PO- Gopalbazar,</td>
                   <td>XXX</td>
                 </tr>
                 <tr>
                   <td>5</td>
                   <td>AADHAAR SHIKSHA TRUST</td>
-                  <td>C/o MINI BORO, HOUSE NO 21, ULUBARI, KACHARI BASTI, GUWAHATI 781007	</td>
+                  <td>
+                    C/o MINI BORO, HOUSE NO 21, ULUBARI, KACHARI BASTI, GUWAHATI
+                    781007{" "}
+                  </td>
                   <td>XXX</td>
                 </tr>
                 <tr>
@@ -185,35 +201,46 @@ const AboutUs = (props) => {
                 <tr>
                   <td>7</td>
                   <td>AAGAN</td>
-                  <td>Hathimata Road, Ward No: 8, Opposite Surat Press, Kokrajhar, Assam.</td>
+                  <td>
+                    Hathimata Road, Ward No: 8, Opposite Surat Press, Kokrajhar,
+                    Assam.
+                  </td>
                   <td>XXX</td>
                 </tr>
                 <tr>
                   <td>8</td>
                   <td>AANRKAPOR</td>
-                  <td>AANRKAPOR C/O: Dhiraj Kumar S/O ; Arjun Ch. Kumar P.OVill: Gotanagar PNGB Road House No: 4 Near Gotanagar Nursery Guwahati-781011</td>
+                  <td>
+                    AANRKAPOR C/O: Dhiraj Kumar S/O ; Arjun Ch. Kumar P.OVill:
+                    Gotanagar PNGB Road House No: 4 Near Gotanagar Nursery
+                    Guwahati-781011
+                  </td>
                   <td>XXX</td>
                 </tr>
                 <tr>
                   <td>9</td>
                   <td>Aasha (A Hope) Foundation and Social Welfare Society</td>
-                  <td>c/o Benzir Arfan, House no. 98, 2nd floor, Panbazar, Danish Road, Lakhtokia, Districtkamrup (M), Guwahati. Assam. Pincode781001. India</td>
+                  <td>
+                    c/o Benzir Arfan, House no. 98, 2nd floor, Panbazar, Danish
+                    Road, Lakhtokia, Districtkamrup (M), Guwahati. Assam.
+                    Pincode781001. India
+                  </td>
                   <td>XXX</td>
                 </tr>
                 <tr>
                   <td>10</td>
                   <td>AASTHA FOUNDATION</td>
-                  <td>AASTHA FOUNDATION,CHOW CHAKRA BUILDING,N.N.DUTTA ROAD ,SILCHAR-788001</td>
+                  <td>
+                    AASTHA FOUNDATION,CHOW CHAKRA BUILDING,N.N.DUTTA ROAD
+                    ,SILCHAR-788001
+                  </td>
                   <td>XXX</td>
                 </tr>
-
-                
               </tbody>
             </table>
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 };

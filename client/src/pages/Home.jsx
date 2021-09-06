@@ -11,12 +11,11 @@ const Home = (props) => {
       <h2 id="carousel">carousel</h2>
       <h2 id="home-map">Map</h2>
       <div id="upload-img">
-        <img src="img/photo.png" id="upload-png"></img>
+        <img src="img/photo.png" id="upload-png" alt="Upload"></img>
         <h2>Upload Here</h2>
       </div>
     </main>
   );
 };
-
 
 export default Home;
