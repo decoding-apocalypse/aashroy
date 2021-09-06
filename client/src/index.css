@@ -54,6 +54,14 @@ main {
   font-weight: bold;
 }
 
+.heading {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid var(--theme1-070);
+}
+
 ::selection {
   color: var(--theme1-100);
   background-color: var(--theme2-100);
@@ -63,5 +71,4 @@ main {
   main {
     padding: 0;
   }
-  
 }
