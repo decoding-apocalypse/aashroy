@@ -1,3 +1,7 @@
+.Home {
+    text-align: center;
+}
+
 #carousel {
   color: red;
   text-transform: capitalize;
@@ -16,4 +20,47 @@
 
 #upload-img {
   padding: 10px 0 10px 0;
+}
+
+#home-info img {
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#home-info h2 {
+    font-weight: bold;
+}
+
+#home-info .infos {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#home-info .infos h4 {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+
+    #home-info h2{
+        font-size: 25px;
+    }
+    
+    #home-info .infos {
+        width: 360px;
+    }
+    
+    #home-info .infos h4 {
+        font-size: 20px;
+    }
+
+    #home-info .infos span {
+        font-size: 15px;
+    }
 }
