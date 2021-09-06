@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Component import
 import Card from "../components/Card";
@@ -10,14 +10,30 @@ const Developer = (props) => {
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/db/team.json")
+      .then((response) => response.json())
+      .then((res) => {
+        setData(res.team);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
-    <div>
-      <h1 className={styles.maintext}>Aashroy</h1>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    <main className={styles.root}>
+      <div className={styles.bg}>
+        <h1>Introducing to the Dev Team</h1>
+      </div>
+      <div className={styles.teamContainer}>
+        {data &&
+          data.map((d, i) => (
+            <Card key={i} name={d.name} img={d.img} links={d.links} />
+          ))}
+      </div>
+    </main>
   );
 };
 
