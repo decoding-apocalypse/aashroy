@@ -1,4 +1,4 @@
 footer {
-    background: #000;
-    height: 25vh;
+  background: #000;
+  height: var(--footer-height-pc);
 }
