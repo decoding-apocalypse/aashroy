@@ -1,28 +1,95 @@
+
+
 .carousel-inner{
     height: 70vh;
-    background-color: rgb(247, 199, 45);
+    background-color: rgb(171, 80, 255);
 }
 
 .news-card-container{
-    margin: 50px;
-    padding: auto;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.Fundcards-group{
+    margin:18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Fund-Raiser{
+    color:white;
+}
+
+.Fundcard{
+    height:300px;
+    width: 250px;
+    border: 4px rgb(187, 180, 180) solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.fundtools-img{
+    height: 50%;
+}
+
+.fundtools{
+    padding: 5px;
+    height: 50%;
+    background-color: rgb(108, 13, 175);
+}
+
+.progress{
+    margin:15px;
+    border-radius: 20px;
+}
+
+.bar{
+    background-color: rgb(211, 57, 185);
+    width: 80%;
+}
+
+.Fundcard:hover{
+    transition: 300ms ease-in;
+    transform: scale(1.01);
+}
+
+.picture-div{
+    background-color: rgb(135, 26, 224);
+    height:290px;
+}
+
+.Fund-Raiser{
+    padding:15px;
+    background-color: rgb(211, 211, 211);
+
+}
+
+.links>a{
+    color: white;
+}
 .news-card{
-    background-color: royalblue;
+    border:5px rgb(116, 78, 78) solid;
+    border-radius: 10px 10px;
+    background-color: rgb(191, 54, 245);
     height: 24rem;
     width: 45%;
     margin: 5px;
-    display: inline-block;
+    display: grid;
 
+}
+
+.slogans{
+    height:500px;
 }
 
 @media only screen and (max-width: 875px) {
   .news-card{
-    background-color: royalblue;
+    background-color: rgb(191, 54, 245);
     height: 24rem;
     width: 80%;
     margin: 12px;
 }
-
 }
