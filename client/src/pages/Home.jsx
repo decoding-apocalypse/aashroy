@@ -80,10 +80,10 @@ const Home = (props) => {
         </div>
       </div>
       <div id="home-map">
-        <img src="img/assam.png"></img>
+        <img src="img/assam.png" alt="Assam map"></img>
       </div>
       <div id="upload-img">
-        <a class="donate-button" href="#">
+        <a class="donate-button" href="/donate">
           Upload Now
         </a>
       </div>
