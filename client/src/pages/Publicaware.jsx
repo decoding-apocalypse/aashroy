@@ -12,7 +12,6 @@ const Publicaware = (props) => {
   }, [props.title]);
   return (
     <main className="Publicaware">
-      <Navbar />
       <div>
         <div
           id="carouselExampleIndicators"
@@ -282,7 +281,6 @@ const Publicaware = (props) => {
       <div className="slogans">
         <h1>Slogans</h1>
       </div>
-      <Footer />
     </main>
   );
 };
