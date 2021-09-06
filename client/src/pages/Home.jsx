@@ -8,11 +8,39 @@ const Home = (props) => {
   }, [props.title]);
   return (
     <main className="Home">
-      <h2 id="carousel">carousel</h2>
-      <h2 id="home-map">Map</h2>
+      <div id="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/carousal-1-(1).jpg" class="d-block w-100" alt="..."></img>
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousal-2-(1).jpg" class="d-block w-100" alt="..."></img>
+            </div>
+            <div class="carousel-item">
+              <img src="img/carousal-3-(1).jpg" class="d-block w-100" alt="..."></img>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div id="home-map">
+        <img src="img/assam.png"></img>
+      </div>
       <div id="upload-img">
-        <img src="img/photo.png" id="upload-png" alt="Upload"></img>
-        <h2>Upload Here</h2>
+        <a class="donate-button" href="#">Upload Now</a>
       </div>
       <div id="home-info">
         <h2>How we complete local needs</h2>
@@ -45,8 +73,13 @@ const Home = (props) => {
             emotional service.
           </span>
         </div>
+<<<<<<< HEAD
       </div>
     </main>
+=======
+      </div> 
+      </main>
+>>>>>>> cfd1599311c7226eaa50d295a04848c50a72e4d2
   );
 };
 
