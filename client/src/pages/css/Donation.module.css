@@ -1,0 +1,40 @@
+.Donation {
+  text-align: center;
+}
+
+.card {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.money,
+.stuffs {
+  padding: 2rem 4rem;
+  height: 30vw;
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 6px 6px 20px rgb(161, 161, 161);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card a {
+  cursor: pointer;
+  color: rgb(36, 36, 36) !important;
+  outline: none;
+  border: none;
+  padding: 0.7rem 2rem;
+  background-color: var(--theme1-100);
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px rgb(151, 151, 151);
+}
+
+.card a:hover {
+  opacity: 0.85;
+  box-shadow: 1px 1px 4px rgb(151, 151, 151);
+}

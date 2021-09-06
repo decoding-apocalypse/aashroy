@@ -12,10 +12,12 @@ import Footer from "./components/Footer";
 
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Donation = lazy(() => import("./pages/Donation"));
+const Money = lazy(() => import("./pages/Money"));
+const Publicaware = lazy(() => import("./pages/Publicaware"));
 const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Publicaware = lazy(() => import("./pages/Publicaware"));
 
 function App() {
   return (
@@ -29,6 +31,14 @@ function App() {
 
           <Route exact path="/developers">
             <Developer title="Developers | Aashroy" />
+          </Route>
+
+          <Route exact path="/donation">
+            <Donation title="Donation | Aashroy" />
+          </Route>
+
+          <Route exact path="/donation/money">
+            <Money title="Money | Aashroy" />
           </Route>
 
           <Route exact path="/public-awareness">
