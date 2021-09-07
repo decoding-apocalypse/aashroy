@@ -1,0 +1,13 @@
+.navigation {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab a {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-style: italic;
+  border: 2px solid var(--theme1-100);
+}
