@@ -6,13 +6,17 @@
 }
 .about-img {
   height: 65vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 50%; */
+  position: relative;
   overflow: hidden;
-  background-position: center;
 }
+.about-img img {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .about-content {
   font-size: 20px;
   line-height: 1.3em;
