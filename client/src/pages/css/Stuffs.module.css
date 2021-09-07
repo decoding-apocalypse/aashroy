@@ -1,6 +1,6 @@
 .navigation {
   width: 80%;
-  margin: auto;
+  margin: 3rem auto;
   display: flex;
   justify-content: space-around;
 }
@@ -10,4 +10,34 @@
   border-radius: 12px;
   font-style: italic;
   border: 2px solid var(--theme1-100);
+}
+
+.paymentCard {
+  width: 70%;
+  margin: auto;
+  height: 60vh;
+  box-shadow: 6px 6px 20px rgb(175, 175, 175);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+}
+
+.card {
+  display: none;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.card h2 {
+  margin-bottom: 4rem;
+}
+
+.card input,
+.card button {
+  padding: 1rem 2rem;
+  border: 2px solid var(--theme1-100);
+  color: rgb(51, 51, 51);
+}
+
+.card button {
+  background-color: var(--theme1-070);
 }
