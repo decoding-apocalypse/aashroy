@@ -15,6 +15,7 @@ const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Donation = lazy(() => import("./pages/Donation"));
 const Money = lazy(() => import("./pages/Money"));
+const Stuffs = lazy(() => import("./pages/Stuffs"));
 const Publicaware = lazy(() => import("./pages/Publicaware"));
 const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
@@ -39,7 +40,11 @@ function App() {
           </Route>
 
           <Route exact path="/donation/money">
-            <Money title="Money | Aashroy" />
+            <Money title="Donate Money | Aashroy" />
+          </Route>
+
+          <Route exact path="/donation/stuffs">
+            <Stuffs title="Donate Stuffs | Aashroy" />
           </Route>
 
           <Route exact path="/public-awareness">

@@ -49,6 +49,13 @@ main {
   padding: 2rem 5rem;
 }
 
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
 .bold {
   color: var(--theme1-100) !important;
   font-weight: bold;
