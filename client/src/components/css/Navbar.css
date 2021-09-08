@@ -1,38 +1,36 @@
- * {
-    font-family: 'Handlee', cursive;
- }
+/* .navbar {
+  height: var(--navbar-height-pc);
+} */
 
 .navbar-brand {
-    padding-right: 60px;
-    padding-left: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 30px;
-    font-weight: bold;
+  padding: 0 60px 0 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .nav-item {
-    position: relative;
+  position: relative;
+  text-align: center;
 }
 
 .hover-anim {
-    font-size: 20px;
-    padding: 0 20px 0 20px;
+  font-size: 20px;
+  padding: 0 20px 0 20px;
 }
 
 .hover-anim::before {
-    position: absolute;
-    content: "";
-    background-color: #BFA2DB;
-    height: 3px;
-    left: 50%;
-    width: 4.5%;
-    transform: translate(-50%, 0) scaleX(0);
-    bottom: 3px;
-    transition: 0.25s;
+  position: absolute;
+  content: "";
+  background-color: var(--theme1-100);
+  height: 3px;
+  left: 50%;
+  width: 4.5%;
+  transform: translate(-50%, 0) scaleX(0);
+  bottom: 3px;
+  transition: 0.25s;
 }
 
 .hover-anim:hover::before {
-    width: 90%;
-    transform: translate(-50%, 0) scaleX(1);
+  width: 90%;
+  transform: translate(-50%, 0) scaleX(1);
 }

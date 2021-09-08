@@ -6,10 +6,18 @@
 }
 
 .news-card-container{
-    margin: 20px;
+    
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.article-box{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-bottom:22px;
 }
 
 .Fundcards-group{
@@ -21,13 +29,15 @@
 
 .Fund-Raiser{
     color:white;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
 }
 
 .Fundcard{
     height:300px;
     width: 250px;
-    border: 4px rgb(187, 180, 180) solid;
-    border-radius: 10px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 4px 10px 3px rgba(0, 0, 0, 0.2);
     margin: 10px;
 }
 
@@ -71,19 +81,24 @@
     color: white;
 }
 .news-card{
-    border:5px rgb(116, 78, 78) solid;
-    border-radius: 10px 10px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
     background-color: rgb(191, 54, 245);
     height: 24rem;
-    width: 45%;
-    margin: 5px;
+    min-width:520px;
+    margin: 9px;
     display: grid;
 
 }
 
 .slogans{
     height:500px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
 }
+
+
 
 @media only screen and (max-width: 875px) {
   .news-card{
@@ -91,5 +106,26 @@
     height: 24rem;
     width: 80%;
     margin: 12px;
+  }
+
 }
+
+.article-image{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fundimage{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.article-image:hover{
+    transition: 300ms;
+    transform: scale(1.02);
 }
