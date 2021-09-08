@@ -1,0 +1,16 @@
+#upload-img img {
+    width: 60px;
+}
+
+#upload-btn {
+    position: relative;
+    width: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#upload-btn button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

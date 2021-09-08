@@ -83,7 +83,7 @@ const Home = (props) => {
         <img src="img/assam.png" alt="Assam map"></img>
       </div>
       <div id="upload-img">
-        <a class="donate-button" href="/donate">
+        <a class="donate-button" href="/upload">
           Upload Now
         </a>
       </div>
