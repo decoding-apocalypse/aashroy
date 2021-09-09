@@ -16,6 +16,7 @@ const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Publicaware = lazy(() => import("./pages/Publicaware"));
+const Chatbot = lazy(() => import("./pages/Chatbot"));
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
 
           <Route exact path="/about">
             <AboutUs title="AboutUs | Aashroy" />
+          </Route>
+          <Route exact path="/chatbot">
+            <Chatbot title="Report | Aashroy" />
           </Route>
 
           <Route path="/">
