@@ -19,6 +19,7 @@ const Stuffs = lazy(() => import("./pages/Stuffs"));
 const Publicaware = lazy(() => import("./pages/Publicaware"));
 const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
+const Report = lazy(() => import("./pages/Report"));
 const Upload = lazy(() => import("./pages/Upload"));
 
 function App() {
@@ -55,14 +56,17 @@ function App() {
             <AboutUs title="AboutUs | Aashroy" />
           </Route>
 
-          <Route exact path="/upload">
-            <Upload title="Upload | Aashroy"/>
+          <Route exact path="/report">
+            <Report title="Report | Aashroy" />
           </Route>
-          
+
+          <Route exact path="/upload">
+            <Upload title="Upload | Aashroy" />
+          </Route>
+
           <Route path="/">
             <Error404 title="Oops Error | Aashroy" />
           </Route>
-
         </Switch>
         <Footer />
       </div>
