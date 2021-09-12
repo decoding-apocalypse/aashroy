@@ -9,7 +9,7 @@ const Upload = (props) => {
     return (
         <div id="upload-img">
             <div id="upload-btn">
-                <img src="img/photo.png"></img>
+                <img src="img/photo.png" alt="upload"></img>
                 <button>Upload</button>
             </div>
         </div>
