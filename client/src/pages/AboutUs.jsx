@@ -15,24 +15,24 @@ const AboutUs = (props) => {
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
+            <div class="carousel-item active about-img" data-bs-interval="10000">
               <img
                 src="img/about-4.jpg"
-                class="d-block w-100 about-img"
+                class="d-block w-100 "
                 alt="nothing"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item about-img" data-bs-interval="2000">
               <img
                 src="img/about-5.jpg"
-                class="d-block w-100 about-img"
+                class="d-block w-100 "
                 alt="nothing"
               />
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item about-img">
               <img
                 src="img/about-6.jpg"
-                class="d-block w-100 about-img"
+                class="d-block w-100 "
                 alt="nothing"
               />
             </div>
@@ -71,7 +71,7 @@ const AboutUs = (props) => {
         </div>
       </div>
       <div className="about-part">
-        <div class="about-card ">
+        <div class="about-card about-card-all">
           <img src="img/about-card-1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Donation</h5>
@@ -140,7 +140,7 @@ const AboutUs = (props) => {
       <div className="about-partners">
         <div className="partners-content">
           <h2>Join us in our fight now!</h2>
-          <div className="about-table-wrapper">
+          <div className=".">
             <table className="about-ngoList">
               <thead>
                 <tr className="table-heading">

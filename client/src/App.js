@@ -12,11 +12,14 @@ import Footer from "./components/Footer";
 
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Donation = lazy(() => import("./pages/Donation"));
+const Money = lazy(() => import("./pages/Money"));
+const Stuffs = lazy(() => import("./pages/Stuffs"));
+const Publicaware = lazy(() => import("./pages/Publicaware"));
 const Developer = lazy(() => import("./pages/Developer"));
 const Error404 = lazy(() => import("./pages/Error404"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Publicaware = lazy(() => import("./pages/Publicaware"));
-const Chatbot = lazy(() => import("./pages/Chatbot"));
+const Upload = lazy(() => import("./pages/Upload"));
 
 function App() {
   return (
@@ -32,6 +35,18 @@ function App() {
             <Developer title="Developers | Aashroy" />
           </Route>
 
+          <Route exact path="/donation">
+            <Donation title="Donation | Aashroy" />
+          </Route>
+
+          <Route exact path="/donation/money">
+            <Money title="Donate Money | Aashroy" />
+          </Route>
+
+          <Route exact path="/donation/stuffs">
+            <Stuffs title="Donate Stuffs | Aashroy" />
+          </Route>
+
           <Route exact path="/public-awareness">
             <Publicaware title="Public Awareness | Aashroy" />
           </Route>
@@ -39,13 +54,15 @@ function App() {
           <Route exact path="/about">
             <AboutUs title="AboutUs | Aashroy" />
           </Route>
-          <Route exact path="/chatbot">
-            <Chatbot title="Report | Aashroy" />
+          
+          <Route exact path="/upload">
+            <Upload title="Upload | Aashroy"/>
           </Route>
-
+          
           <Route path="/">
             <Error404 title="Oops Error | Aashroy" />
           </Route>
+
         </Switch>
         <Footer />
       </div>

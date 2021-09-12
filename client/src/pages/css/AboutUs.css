@@ -9,13 +9,17 @@
 }
 .about-img {
   height: 65vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 50%; */
+  position: relative;
   overflow: hidden;
-  background-position: center;
 }
+.about-img img {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .about-content {
   display: inline-block ;
   font-size: 20px;
@@ -106,7 +110,8 @@ a {
 .about-ngoList {
   table-layout: fixed;
   overflow: hidden;
-  /* width: 100%; */
+  width: 100%;
+  height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-collapse: collapse;
   font-size: 19px;
@@ -141,8 +146,9 @@ tr:nth-child(even) {
   color: white;
   text-align: center;
 }
-@media (min-width: 360px) and (max-width: 1000px) 
-{
+@media (min-width: 360px) and (max-width: 1000px) {
+
+  
   .about-card
   {
     position: absolute;
@@ -180,8 +186,8 @@ tr:nth-child(even) {
   .about-content
   {
     display: inline-block;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 20px;
   }
   .AboutUs-box
@@ -195,4 +201,14 @@ tr:nth-child(even) {
     padding-left: 0;
     padding-right: 0;
   }
-}
+  .takeAction-content
+  {
+   
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  tbody
+  {
+    font-size: 15px;
+  }
+} 

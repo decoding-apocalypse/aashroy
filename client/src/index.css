@@ -49,9 +49,24 @@ main {
   padding: 2rem 5rem;
 }
 
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
 .bold {
   color: var(--theme1-100) !important;
   font-weight: bold;
+}
+
+.heading {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid var(--theme1-070);
 }
 
 ::selection {
@@ -63,5 +78,4 @@ main {
   main {
     padding: 0;
   }
-  
 }
