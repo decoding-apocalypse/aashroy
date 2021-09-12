@@ -27,7 +27,9 @@ const Publicaware = (props) => {
             <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img className="article-image" src="img/homelesspic.jpg"></img>
-                <div className="article-text">Article 1</div>
+                <div className="article-text" alt="article 1">
+                  Article 1
+                </div>
               </div>
             </a>
 
@@ -36,6 +38,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize1.jpg"
+                  alt="article 2"
                 ></img>
                 <div className="article-text">Article 2</div>
               </div>
@@ -46,6 +49,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize3.jpg"
+                  alt="article 3"
                 ></img>
                 <div className="article-text">Article 3</div>
               </div>
@@ -56,6 +60,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize2.jpg"
+                  alt="article 4"
                 ></img>
                 <div className="article-text">Article 4</div>
               </div>
@@ -66,6 +71,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize4.jpg"
+                  alt="article 5"
                 ></img>
                 <div className="article-text">Article 5</div>
               </div>
@@ -76,6 +82,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize5.jpg"
+                  alt="article 6"
                 ></img>
                 <div className="article-text">Article 6</div>
               </div>
@@ -86,6 +93,7 @@ const Publicaware = (props) => {
                 <img
                   className="article-image"
                   src="img/homelesspicssize6.jpg"
+                  alt="article 7"
                 ></img>
                 <div className="article-text">Article 7</div>
               </div>
@@ -99,7 +107,11 @@ const Publicaware = (props) => {
           <div className="Fundcards-group">
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-1.jpeg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-1.jpeg"
+                  alt="Help India Breathe"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -112,7 +124,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-2.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-2.jpg"
+                  alt="KhaanaChahiye"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -125,7 +141,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-3.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-3.jpg"
+                  alt="Feed the Hungry"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -138,7 +158,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-4.png"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-4.png"
+                  alt="Help India Breathe"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -151,7 +175,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-5.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-5.jpg"
+                  alt="A Better life"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -164,7 +192,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-6.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-6.jpg"
+                  alt="Charitable Change"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -177,7 +209,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/fundraiser-7.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-7.jpg"
+                  alt="Charity Cause"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -190,7 +226,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/homelesspic-9.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-9.jpg"
+                  alt="Thirst"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -203,7 +243,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/homelesspic-8.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-8.jpg"
+                  alt="Place for all"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -216,7 +260,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/homelesspic-4.jpg"></img>
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-4.jpg"
+                  alt="Hungry for Food"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
@@ -229,7 +277,11 @@ const Publicaware = (props) => {
             </div>
             <div className="Fundcard">
               <div className="fundtools-img">
-                <img className="fundimage" src="img/homelesspic-2.png"></img>
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-2.png"
+                  alt="Asha"
+                ></img>
               </div>
               <div className="fundtools">
                 <h4>Fund Raiser</h4>
