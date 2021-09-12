@@ -26,8 +26,8 @@ const Publicaware = (props) => {
           <div className="news-card-container">
             <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
-                <img className="article-image" src="img/homelesspic.jpg"></img>
-                <div className="article-text" alt="article 1">
+                <img className="article-image" src="img/homelesspic.jpg" alt="article 1"></img>
+                <div className="article-text">
                   Article 1
                 </div>
               </div>
