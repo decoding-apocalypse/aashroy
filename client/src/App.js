@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import Pizza from "./components/pizza/Pizza";
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -27,6 +28,8 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
+        <Pizza />;
+
           <Route exact path="/">
             <Home title="Home | Aashroy" />
           </Route>
@@ -57,6 +60,10 @@ function App() {
           
           <Route exact path="/upload">
             <Upload title="Upload | Aashroy"/>
+          </Route>
+
+          <Route exact path="/chatbot">
+            <Upload title="Report | Aashroy"/>
           </Route>
           
           <Route path="/">
