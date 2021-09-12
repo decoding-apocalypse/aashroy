@@ -28,6 +28,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
+
           <Route exact path="/">
             <Home title="Home | Aashroy" />
           </Route>
