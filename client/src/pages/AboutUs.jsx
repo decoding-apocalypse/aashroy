@@ -66,7 +66,7 @@ const AboutUs = (props) => {
             the homeless has on community and to Human Rights preservation and
             protection.With your help we plan to remove homelessness in our
             society and remove the crimes against them and make our society a
-            better place.
+            better place.Be the change you want to see in the society by helping the helpless and being the hope to the community.Lead from the forefront donate,aware and report all that you can do! 
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ const AboutUs = (props) => {
           <div class="card-body">
             <h5 class="card-title">Donation</h5>
             <p class="card-text">
-              Donate today for a better cause and for serving humanity.
+              Donate today for a better cause for serving the helpless and humanity .
             </p>
             <div
               class="card-btn btn-group"
@@ -140,7 +140,7 @@ const AboutUs = (props) => {
       <div className="about-partners">
         <div className="partners-content">
           <h2>Join us in our fight now!</h2>
-          <div className="about-table-wrapper">
+          <div className=".">
             <table className="about-ngoList">
               <thead>
                 <tr className="table-heading">
