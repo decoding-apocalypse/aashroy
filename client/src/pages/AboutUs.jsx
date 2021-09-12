@@ -11,49 +11,58 @@ const AboutUs = (props) => {
       <div className="about-carousel">
         <div
           id="carouselExampleInterval"
-          class="carousel slide"
+          className="carousel slide"
           data-bs-ride="carousel"
         >
-          <div class="carousel-inner">
-            <div class="carousel-item active about-img" data-bs-interval="10000">
+          <div className="carousel-inner">
+            <div
+              className="carousel-item active about-img"
+              data-bs-interval="10000"
+            >
               <img
                 src="img/about-4.jpg"
-                class="d-block w-100 "
+                className="d-block w-100 "
                 alt="nothing"
               />
             </div>
-            <div class="carousel-item about-img" data-bs-interval="2000">
+            <div className="carousel-item about-img" data-bs-interval="2000">
               <img
                 src="img/about-5.jpg"
-                class="d-block w-100 "
+                className="d-block w-100 "
                 alt="nothing"
               />
             </div>
-            <div class="carousel-item about-img">
+            <div className="carousel-item about-img">
               <img
                 src="img/about-6.jpg"
-                class="d-block w-100 "
+                className="d-block w-100 "
                 alt="nothing"
               />
             </div>
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleInterval"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </div>
@@ -66,64 +75,66 @@ const AboutUs = (props) => {
             the homeless has on community and to Human Rights preservation and
             protection.With your help we plan to remove homelessness in our
             society and remove the crimes against them and make our society a
-            better place.Be the change you want to see in the society by helping the helpless and being the hope to the community.Lead from the forefront donate,aware and report all that you can do! 
+            better place.Be the change you want to see in the society by helping
+            the helpless and being the hope to the community.Lead from the
+            forefront donate,aware and report all that you can do!
           </p>
         </div>
       </div>
       <div className="about-part">
-        <div class="about-card about-card-all">
-          <img src="img/about-card-1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Donation</h5>
-            <p class="card-text">
-              Donate today for a better cause for serving the helpless and humanity .
+        <div className="about-card about-card-all">
+          <img src="img/about-card-1.jpg" className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Donation</h5>
+            <p className="card-text">
+              Donate today for a better cause and for serving humanity.
             </p>
             <div
-              class="card-btn btn-group"
+              className="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
-              <button type="button" class="btn btn-outline-warning">
+              <button type="button" className="btn btn-outline-warning">
                 <a href="/donate">Donate Now</a>
               </button>
             </div>
           </div>
         </div>
-        <div class="about-card-2 ">
-          <img src="img/about-card-2.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">
+        <div className="about-card-2 ">
+          <img src="img/about-card-2.jpg" className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">
               <br />
               Public Awareness{" "}
             </h5>
-            <p class="card-text">
+            <p className="card-text">
               Understand about basic the Human Rights and the need of basic
               housing.
             </p>
             <div
-              class="card-btn btn-group"
+              className="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
-              <button type="button" class="btn btn-outline-warning">
+              <button type="button" className="btn btn-outline-warning">
                 <a href="public-awareness">Public Awareness</a>
               </button>
             </div>
           </div>
         </div>
-        <div class="about-card-3 ">
-          <img src="img/about-card-3.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Report any illegal activity</h5>
-            <p class="card-text">
+        <div className="about-card-3 ">
+          <img src="img/about-card-3.jpg" className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Report any illegal activity</h5>
+            <p className="card-text">
               Report any illegal and suspicious activity in your neighborhood.
             </p>
             <div
-              class="card-btn btn-group"
+              className="card-btn btn-group"
               role="group"
               aria-label="Basic outlined example"
             >
-              <button type="button" class="btn btn-outline-warning">
+              <button type="button" className="btn btn-outline-warning">
                 <a href="/report"> Report Now</a>
               </button>
             </div>
