@@ -7,12 +7,17 @@ const Upload = (props) => {
         document.title = props.title;
     }, [props.title]);
     return (
-        <div id="upload-img">
-            <div id="upload-btn">
-                <img src="img/photo.png" alt="upload"></img>
-                <button>Upload</button>
+        <main>
+            <h2>Please Select Location</h2>
+            <div id="location-map">
+
+            </div>     
+            <div id="upload-img">
+                <div id="upload-btn">
+                    <button><img src="img/photo.png"></img> Upload</button>
+                </div>
             </div>
-        </div>
+        </main>
     );
 }
 
