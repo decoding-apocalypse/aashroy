@@ -7,312 +7,329 @@ const Publicaware = (props) => {
     document.title = props.title;
   }, [props.title]);
   return (
-    <main className="Publicaware">
-      <div className="publicaware-carousel">
-        <div
-          id="carouselExampleInterval"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img
-                src="img/about-4.jpg"
-                class="d-block w-100 about-img"
-                alt="nothing"
-              />
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img
-                src="img/about-5.jpg"
-                class="d-block w-100 about-img"
-                alt="nothing"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="img/about-6.jpg"
-                class="d-block w-100 about-img"
-                alt="nothing"
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+    <div className="Publicaware">
+      <div className="jumbotron">
+        <div className="sos">Save</div>
+        <div className="sos">Our</div>
+        <div className="sos">Society</div>
       </div>
-      <br></br>
-      <div className="article-box">
-        <h1>Articles</h1>
-        <div className="news-card-container">
-          <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-            <div className="news-card">
-              <div className="picture-div">
-                <img className="article-image" src="img/homelesspic.jpg"></img>
-              </div>
-              <div className="links">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+      <div className="logo-container">
+        <div className="logo"></div>
+      </div>
+
+      <div className="aware-content">
+        <div className="article-box">
+          <br></br>
+          <br></br>
+          <h2>ARTICLES</h2>
+          <br></br>
+          <div className="news-card-container">
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img className="article-image" src="img/homelesspic.jpg" alt="article 1"></img>
+                <div className="article-text">
                   Article 1
-                </a>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
 
-          <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-            <div className="news-card">
-              <div className="picture-div">
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
                 <img
                   className="article-image"
-                  src="img/homelesspic-1.jpg"
+                  src="img/homelesspicssize1.jpg"
+                  alt="article 2"
+                ></img>
+                <div className="article-text">Article 2</div>
+              </div>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img
+                  className="article-image"
+                  src="img/homelesspicssize3.jpg"
+                  alt="article 3"
+                ></img>
+                <div className="article-text">Article 3</div>
+              </div>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img
+                  className="article-image"
+                  src="img/homelesspicssize2.jpg"
+                  alt="article 4"
+                ></img>
+                <div className="article-text">Article 4</div>
+              </div>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img
+                  className="article-image"
+                  src="img/homelesspicssize4.jpg"
+                  alt="article 5"
+                ></img>
+                <div className="article-text">Article 5</div>
+              </div>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img
+                  className="article-image"
+                  src="img/homelesspicssize5.jpg"
+                  alt="article 6"
+                ></img>
+                <div className="article-text">Article 6</div>
+              </div>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+              <div className="news-card">
+                <img
+                  className="article-image"
+                  src="img/homelesspicssize6.jpg"
+                  alt="article 7"
+                ></img>
+                <div className="article-text">Article 7</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div className="Fund-Raiser">
+          <h2>Fund Raiser</h2>
+
+          <div className="Fundcards-group">
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-1.jpeg"
+                  alt="Help India Breathe"
                 ></img>
               </div>
-              <div className="links">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-                  Article 2
-                </a>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Help India Breathe</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5> $ 1,408,612</h5>
               </div>
             </div>
-          </a>
-
-          <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-            <div className="news-card">
-              <div className="picture-div">
+            <div className="Fundcard">
+              <div className="fundtools-img">
                 <img
-                  className="article-image"
-                  src="img/homelesspic-2.png"
+                  className="fundimage"
+                  src="img/fundraiser-2.jpg"
+                  alt="KhaanaChahiye"
                 ></img>
               </div>
-              <div className="links">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-                  Article 3
-                </a>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>KhaanaChahiye</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 876,585 </h5>
               </div>
             </div>
-          </a>
-
-          <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-            <div className="news-card">
-              <div className="picture-div">
+            <div className="Fundcard">
+              <div className="fundtools-img">
                 <img
-                  className="article-image"
-                  src="img/homelesspic-3.jpg"
+                  className="fundimage"
+                  src="img/fundraiser-3.jpg"
+                  alt="Feed the Hungry"
                 ></img>
               </div>
-              <div className="links">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-                  Article 4
-                </a>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Feed the Hungry</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$89,870</h5>
               </div>
             </div>
-          </a>
-
-          <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-            <div className="news-card">
-              <div className="picture-div">
+            <div className="Fundcard">
+              <div className="fundtools-img">
                 <img
-                  className="article-image"
+                  className="fundimage"
+                  src="img/fundraiser-4.png"
+                  alt="Help India Breathe"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Help India Breathe</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$34,560</h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-5.jpg"
+                  alt="A Better life"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>A Better life</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 69,585 </h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-6.jpg"
+                  alt="Charitable Change"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Charitable Change</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 76,585 </h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/fundraiser-7.jpg"
+                  alt="Charity Cause"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Charity Cause</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 16,585</h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-9.jpg"
+                  alt="Thirst"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Thirst</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 6,585</h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-8.jpg"
+                  alt="Place for all"
+                ></img>
+              </div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Place for all</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 46,585</h5>
+              </div>
+            </div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
                   src="img/homelesspic-4.jpg"
+                  alt="Hungry for Food"
                 ></img>
               </div>
-              <div className="links">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
-                  Article 5
-                </a>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Hungry for Food</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 76,585</h5>
               </div>
             </div>
-          </a>
-        </div>
-      </div>
-
-      <div className="Fund-Raiser">
-        <h1>Fund Raiser</h1>
-
-        <div className="Fundcards-group">
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-1.jpeg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Help India Breathe</p>
-              <div className="progress">
-                <div className="bar"></div>
+            <div className="Fundcard">
+              <div className="fundtools-img">
+                <img
+                  className="fundimage"
+                  src="img/homelesspic-2.png"
+                  alt="Asha"
+                ></img>
               </div>
-              <h5> $ 1,408,612</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-2.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>KhaanaChahiye</p>
-              <div className="progress">
-                <div className="bar"></div>
+              <div className="fundtools">
+                <h4>Fund Raiser</h4>
+                <p>Asha</p>
+                <div className="progress">
+                  <div className="bar"></div>
+                </div>
+                <h5>$ 33,585</h5>
               </div>
-              <h5>$ 876,585 </h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-3.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Feed the Hungry</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$9,870</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-4.png"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Help India Breathe</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-5.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>KhaanaChahiye</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-6.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-7.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-5.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-4.png"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-1.jpeg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
-            </div>
-          </div>
-          <div className="Fundcard">
-            <div className="fundtools-img">
-              <img className="fundimage" src="img/fundraiser-5.jpg"></img>
-            </div>
-            <div className="fundtools">
-              <h4>Fund Raiser</h4>
-              <p>Name of Organization</p>
-              <div className="progress">
-                <div className="bar"></div>
-              </div>
-              <h5>$Amount</h5>
             </div>
           </div>
         </div>
-      </div>
 
-      <br></br>
-      <div className="slogans">
-        <h1 style={{ "text-align": "center" }}>Slogans</h1>
         <br></br>
-        <br></br>
-        <div className="slogan-text">
-          <br></br>
-          <h2>''You Don't Need A Reason To Help People.''</h2>
+        <div className="slogans">
+          <h2 style={{ textAlign: "center" }}>Slogans</h2>
           <br></br>
           <br></br>
-          <br></br>
-          <h2 style={{ "text-align": "right" }}>
-            ''If You Can't Feed a Hundred People, then Feed Just One.
-          </h2>
-          <br></br>
-          <br></br>
-          <br></br>
-          <h2 style={{ "text-align": "left" }}>
-            ''We Can't Help Everyone But Everyone Can Help Someone.
-          </h2>
+          <div className="slogan-text">
+            <br></br>
+            <div className="slogan-text-each">
+              <h3>''You Don't Need A Reason To Help People.''</h3>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <div className="slogan-text-each">
+              <h3 style={{ textAlign: "right" }}>
+                ''If You Can't Feed a Hundred People, then Feed Just One.''
+              </h3>
+            </div>
+
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <div className="slogan-text-each">
+              <h3 style={{ textAlign: "left" }}>
+                ''We Can't Help Everyone But Everyone Can Help Someone.''
+              </h3>
+            </div>
+            <br></br>
+            <br></br>
+          </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

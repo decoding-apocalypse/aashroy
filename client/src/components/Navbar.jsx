@@ -1,14 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./css/Navbar.css";
 
 const Navbar = (props) => {
+  const handleClick = (e) => {
+    console.log(e.target);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           AASHROY
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,29 +28,44 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link
+                className="nav-link"
+                aria-current="page"
+                to="/"
+                onClick={handleClick}
+              >
                 <span className="hover-anim">Home</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
-                <span className="hover-anim">About Us</span>
-              </a>
+              <Link className="nav-link" aria-current="page" to="/upload">
+                <span className="hover-anim">Upload</span>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/donation">
+              <Link className="nav-link" to="/donation">
                 <span className="hover-anim">Donation</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/public-awareness">
+              <Link className="nav-link" to="/public-awareness">
                 <span className="hover-anim">Public Awareness</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/developers">
+              <Link className="nav-link" to="/report">
+                <span className="hover-anim">Report</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                <span className="hover-anim">About Us</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/developers">
                 <span className="hover-anim">Developers</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

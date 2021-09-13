@@ -1,24 +1,100 @@
 
-
-.carousel-inner{
-    height: 70vh;
-    background-color: rgb(171, 80, 255);
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0e8f7;
+    height: 350px;
+    background-color: #c09fdd;
+    margin: 0;
+}
+.logo-container{
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.news-card-container{
+.logo{
+    position: relative;
+    background-color: crimson;
+    height: 120px;
+    width: 120px;
+    z-index: 1;
+}
+
+.aware-content{
+    position: relative;
+    bottom: 110px;
+    margin: 40px 40px 0;
+}
+
+ .article-box{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.article-box>h2{
+    text-align: center;
+}
+
+
+
+.news-card{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(191, 54, 245);
+}
+
+.article-image:hover{
+    transition: 500ms;
+    transform: scale(1.012);
     
-    margin: 10px;
+} 
+
+.news-card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-.article-box{
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    margin-bottom:22px;
+
+.news-card{
+    width: 500px;
+    /* min-width: 300px; */
 }
+
+.news-card{
+    position: relative;
+    background-color: rgb(33, 34, 34);
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-image{
+    height: 100%;
+    max-height: 400px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.article-text {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/*  */
+/*  */
 
 .Fundcards-group{
     margin:18px;
@@ -28,9 +104,21 @@
 }
 
 .Fund-Raiser{
-    color:white;
+    color: rgb(255, 255, 255);
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Fund-Raiser>h2{
+    text-align: center;
+}
+
+.fundimage{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
 }
 
 .Fundcard{
@@ -48,11 +136,12 @@
 .fundtools{
     padding: 5px;
     height: 50%;
-    background-color: rgb(108, 13, 175);
+   background-color: #9e45f1;
+
 }
 
 .progress{
-    margin:15px;
+    margin:15px 1px;
     border-radius: 20px;
 }
 
@@ -66,66 +155,86 @@
     transform: scale(1.01);
 }
 
-.picture-div{
-    background-color: rgb(135, 26, 224);
-    height:290px;
-}
 
 .Fund-Raiser{
     padding:15px;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(207, 205, 205);
 
 }
 
-.links>a{
-    color: white;
-}
-.news-card{
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgb(191, 54, 245);
-    height: 24rem;
-    min-width:520px;
-    margin: 9px;
-    display: grid;
 
-}
 
 .slogans{
-    height:500px;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
     padding: 15px;
 }
 
+.slogan-text-each{
+    margin-bottom: 2px;
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 4px 10px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgb(199, 199, 199);
+    
+}
 
-
-@media only screen and (max-width: 875px) {
-  .news-card{
-    background-color: rgb(191, 54, 245);
-    height: 24rem;
-    width: 80%;
+.sos{
     margin: 12px;
+    font-size: 50px;
+    user-select: none;
+}
+
+
+@media only screen and (max-width: 1202px) {
+  
+    .news-card{
+    width: 400px;
+    min-width: 300px;
+}
+}
+
+@media only screen and (max-width: 1002px) {
+  
+    .news-card{
+    width: 300px;
+    min-width: 300px;
+}
+}
+
+@media only screen and (max-width: 990px) {
+  
+    .news-card{
+    width: 200px;
+    
+}
+}
+
+@media only screen and (max-width: 840px) {
+  
+    .news-card{
+    width: 300px;
+    
+}
+}
+@media only screen and (max-width: 390px) {
+  .Fund-Raiser{
+      margin:0px 0px;
   }
-
+    
 }
 
-.article-image{
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+@media only screen and (max-width: 490px) {
+  
+    .news-card{
+    width: 300px;
+    /* min-width: 300px; */
+}
 }
 
-.fundimage{
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
+@media only screen and (max-width: 420px) {
+  
+    .Fundcard{
+    margin: 10px;
 }
-
-.article-image:hover{
-    transition: 300ms;
-    transform: scale(1.02);
 }

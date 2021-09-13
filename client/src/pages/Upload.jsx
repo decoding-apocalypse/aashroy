@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 
 import "./css/Upload.css"
-import Map from "./Map"
 
 const Upload = (props) => {
     useEffect(() => {
@@ -11,9 +10,8 @@ const Upload = (props) => {
         <main>
             <h2>Please Select Location</h2>
             <div id="location-map">
-                <Map/>
-            </div>
-        
+
+            </div>     
             <div id="upload-img">
                 <div id="upload-btn">
                     <button><img src="img/photo.png"></img> Upload</button>
