@@ -1,18 +1,25 @@
 import React, {useEffect} from "react";
 
 import "./css/Upload.css"
+import Map from "./Map"
 
 const Upload = (props) => {
     useEffect(() => {
         document.title = props.title;
     }, [props.title]);
     return (
-        <div id="upload-img">
-            <div id="upload-btn">
-                <img src="img/photo.png"></img>
-                <button>Upload</button>
+        <main>
+            <h2>Please Select Location</h2>
+            <div id="location-map">
+                <Map/>
             </div>
-        </div>
+        
+            <div id="upload-img">
+                <div id="upload-btn">
+                    <button><img src="img/photo.png"></img> Upload</button>
+                </div>
+            </div>
+        </main>
     );
 }
 
