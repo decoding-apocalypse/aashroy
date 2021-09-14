@@ -3,9 +3,14 @@
 } */
 
 .navbar-brand {
-  padding: 0 60px 0 20px;
+  margin-left: 20px;
   font-size: 30px;
   font-weight: bold;
+}
+
+.navbar-brand img {
+  padding: 0;
+  width: 100px;
 }
 
 .nav-item {
@@ -33,4 +38,90 @@
 .hover-anim:hover::before {
   width: 90%;
   transform: translate(-50%, 0) scaleX(1);
+}
+
+#nav-btns {
+  position: absolute;
+  right: 2vw;
+  top: 50%;
+}
+
+#nav-btns a {
+  transform: translate(0, -50%);
+  padding: 5px 20px;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--theme1-100);
+  margin-right:5px;
+  border-radius:8px;
+  transition: color 0.2s;
+}
+
+#nav-btns a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--theme1-100);
+  height: 100px;
+  width: 150px;
+  border-radius: 50%;
+  left: -28px;
+  bottom: 100%;
+  transition: all 0.5s;
+}
+
+#nav-btns a:hover {
+  color: #fff;
+}
+
+#nav-btns a:hover:before {
+  bottom: -50px;
+}
+
+@media screen and (min-width: 1220px) and (max-width: 1344px) {
+  .hover-anim {
+    padding: 0 0.8vw 0 0.8vw;
+  }
+}
+
+@media screen and (min-width: 1132px) and (max-width: 1220px) {
+  .hover-anim {
+    padding: 0 0.4vw 0 0.4vw;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1132px) {
+  .navbar-brand {
+    margin-left: 0px;
+  }
+
+  .hover-anim {
+    padding: 0 0.4vw 0 0.4vw;
+  }
+
+  #nav-btns {
+    right: 0;
+  }
+
+  #nav-btns a {
+    padding: 2px 15px;
+  }
+
+  .hover-anim {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #nav-btns {
+    position: relative;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #nav-btns a {
+    margin: 0 10px;
+  }
 }

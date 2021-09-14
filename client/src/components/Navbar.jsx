@@ -12,7 +12,7 @@ const Navbar = (props) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          AASHROY
+          <img src="img/icons/logo.png"/>
         </Link>
         <button
           className="navbar-toggler"
@@ -49,7 +49,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/public-awareness">
-                <span className="hover-anim">Public Awareness</span>
+                <span className="hover-anim">Awareness</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -59,13 +59,17 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">
-                <span className="hover-anim">About Us</span>
+                <span className="hover-anim">About</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/developers">
                 <span className="hover-anim">Developers</span>
               </Link>
+            </li>
+            <li className="nav-item" id="nav-btns">
+              <Link to="/login">Log In</Link>
+              <Link to="/signup">Sign Up</Link>
             </li>
           </ul>
         </div>
