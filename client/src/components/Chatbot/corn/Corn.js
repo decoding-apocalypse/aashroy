@@ -3,7 +3,7 @@ import React from "react";
 function Corn() {
   return (
     <div>
-      <div className="corns">
+      {/* <div className="corns">
         <div className="corn-1" />
         <div className="corn-2" />
         <div className="corn-3" />
@@ -15,11 +15,11 @@ function Corn() {
         <div className="corn-9" />
         <div className="corn-10" />
         <div className="corn-11" />
-      </div>
+      </div> */}
 
-      <div className="corns">
+      {/* <div className="corns">
         <div className="corn-11" />
-      </div>
+      </div> */}
     </div>
   );
 }
