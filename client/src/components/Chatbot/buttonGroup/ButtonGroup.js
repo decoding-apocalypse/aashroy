@@ -6,7 +6,7 @@ function ButtonGroup(props) {
   };
   return (
     <div>
-      <div className="d-flex justify-content-center mt-3 mb-3">
+      {/* <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           className="btn btn-danger btn-block"
           style={buttonWidth}
@@ -16,9 +16,9 @@ function ButtonGroup(props) {
         >
           Add/Remove Tomato
         </button>
-      </div>
+      </div> */}
 
-      <div className="d-flex justify-content-center mt-3 mb-3">
+      {/* <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           className="btn btn-secondary btn-block"
           style={buttonWidth}
@@ -28,9 +28,9 @@ function ButtonGroup(props) {
         >
           Add/Remove Mushroom
         </button>
-      </div>
+      </div> */}
 
-      <div className="d-flex justify-content-center mt-3 mb-3">
+      {/* <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           className="btn btn-warning btn-block"
           style={buttonWidth}
@@ -40,9 +40,9 @@ function ButtonGroup(props) {
         >
           Add/Remove Corn
         </button>
-      </div>
+      </div> */}
 
-      <div className="d-flex justify-content-center mt-3 mb-3">
+      {/* <div className="d-flex justify-content-center mt-3 mb-3">
         <button
           className="btn btn-success 1-block"
           style={buttonWidth}
@@ -52,7 +52,7 @@ function ButtonGroup(props) {
         >
           Add/Remove Veggie
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

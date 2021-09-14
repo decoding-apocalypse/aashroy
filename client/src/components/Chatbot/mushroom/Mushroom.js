@@ -3,7 +3,7 @@ import React from "react";
 function Mushroom() {
   return (
     <div>
-      <div className="mushrooms">
+      {/* <div className="mushrooms">
         <div className="cup-1" />
         <div className="stem-1" />
         <div className="cup-2" />
@@ -18,12 +18,12 @@ function Mushroom() {
         <div className="stem-6" />
         <div className="cup-7" />
         <div className="stem-7" />
-      </div>
+      </div> */}
 
-      <div className="mushrooms">
+      {/* <div className="mushrooms">
         <div className="cup-8" />
         <div className="stem-8" />
-      </div>
+      </div> */}
     </div>
   );
 }

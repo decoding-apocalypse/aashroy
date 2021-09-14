@@ -49,7 +49,7 @@ class Pizza extends Component {
       <div>
         <div className="container mt-5">
           <div className="d-flex justify-content-center">
-            <div className="plate">
+            {/* <div className="plate"> */}
               <Base />
               {tomato}
               {mushroom}
@@ -60,7 +60,7 @@ class Pizza extends Component {
           <ButtonGroup eventHandler={this.clickEventHandler} />
           <CustomChatbot eventHandler={this.clickEventHandler} />
         </div>
-      </div>
+      // </div>
     );
   }
 }

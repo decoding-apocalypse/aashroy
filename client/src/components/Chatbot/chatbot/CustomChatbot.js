@@ -24,7 +24,7 @@ function CustomChatbot(props) {
   const steps = [
     {
       id: "Greet",
-      message: "Hello, Welcome to our shop",
+      message: "Hello, Welcome to our website",
       trigger: "Ask Name"
     },
     {
@@ -35,118 +35,130 @@ function CustomChatbot(props) {
     {
       id: "Waiting user input for name",
       user: true,
-      trigger: "Asking options to eat"
+      trigger: "Asking options to report"
     },
     {
-      id: "Asking options to eat",
-      message: "Hi {previousValue}, Please click on what you want to eat!",
-      trigger: "Displaying options to eat"
+      id: "Asking options to report",
+      message: "Hi {previousValue}, Please click on what you want to report today!",
+      trigger: "Displaying options to report"
     },
     {
-      id: "Displaying options to eat",
+      id: "Displaying options to report",
       options: [
         {
-          value: "pizza",
-          label: "Pizza",
-          trigger: "Asking for Tomatoes in Pizza"
+          value: "crimes",
+          label: "Crimes",
+          trigger: "Asking for crimes in your locality"
         },
-        { value: "burger", label: "Burger", trigger: "Burger Not available" }
+        { value: "Illegal Activities", label: "Illegal Activities", trigger: "Illegal Activities report" }
       ]
     },
-    {
-      id: "Burger Not available",
+    { 
+      id: "Illegal Activities report",
       message:
-        "Sorry, We don't have burger available at the moment. Would you like to try our pizza?",
-      trigger: "Asking for pizza after burger"
+        "Please write your complaint against the illegal activities",
+        user:true,
+      trigger: "Location",
     },
     {
-      id: "Asking for pizza after burger",
+      id: "Location",
+      message: "Please enter the location where you saw the event happening?",  
+      user:true,
+      trigger:"Thankyou",
+    },
+    {
+      id: "Asking for Crimes after illegal activities",
+      message: "Do you want to report any  crimes as well? ", 
       options: [
-        { value: true, label: "Yes", trigger: "Asking for Tomatoes in Pizza" },
+        { value: true, label: "Yes", trigger: "Asking for crimes in your locality" },
         { value: false, label: "No", trigger: "Done" }
       ]
     },
     {
-      id: "Asking for Tomatoes in Pizza",
-      message: "Would you like to have tomatoes in your pizza",
-      trigger: "Adding Tomatoes in Pizza"
+      id: "Asking for crimes in your locality",
+      message: "Please write your Crime report here...",
+      user: true,
+      trigger: "Location",
+    },
+    // {
+    //   id: "Crime Report",
+    //   message: "Enter your location",
+    //   user:true,
+    //   trigger:"Thankyou",
+    // },
+    {
+      id: "Location",
+      message: "Please enter the location where you saw the event happening?",  
+      user:true,
+      trigger:"Thankyou",
     },
     {
-      id: "Adding Tomatoes in Pizza",
-      options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-            props.eventHandler("tomato");
-            return "Asking for Mushroom in Pizza";
-          }
-        },
-        { value: false, label: "No", trigger: "Asking for Mushroom in Pizza" }
-      ]
+      id: "Thankyou",
+      message: "Thankyou! for your complaint. We are working hard to look into your complaint",
+      trigger: "Done",
     },
 
-    {
-      id: "Asking for Mushroom in Pizza",
-      message: "Would you like to have mushroom in your pizza",
-      trigger: "Adding Mushroom in Pizza"
-    },
+    // {
+    //   id: "Asking for Mushroom in Pizza",
+    //   message: "Would you like to have mushroom in your pizza",
+    //   trigger: "Adding Mushroom in Pizza",
+    // },
 
-    {
-      id: "Adding Mushroom in Pizza",
-      options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-            props.eventHandler("mushroom");
-            return "Asking for Corn in Pizza";
-          }
-        },
-        { value: false, label: "No", trigger: "Asking for Corn in Pizza" }
-      ]
-    },
-    {
-      id: "Asking for Corn in Pizza",
-      message: "Would you like to have corn in your pizza",
-      trigger: "Adding Corn in Pizza"
-    },
+    // {
+    //   id: "Adding Mushroom in Pizza",
+    //   options: [
+    //     {
+    //       value: true,
+    //       label: "Yes",
+    //       trigger: () => {
+    //         props.eventHandler("mushroom");
+    //         return "Asking for Corn in Pizza";
+    //       }
+    //     },
+    //     { value: false, label: "No", trigger: "Asking for Corn in Pizza" }
+    //   ]
+    // },
+    // {
+    //   id: "Asking for Corn in Pizza",
+    //   message: "Would you like to have corn in your pizza",
+    //   trigger: "Adding Corn in Pizza"
+    // },
 
-    {
-      id: "Adding Corn in Pizza",
-      options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-            props.eventHandler("corn");
-            return "Asking for Veggies in Pizza";
-          }
-        },
-        { value: false, label: "No", trigger: "Asking for Veggies in Pizza" }
-      ]
-    },
+    // {
+    //   id: "Adding Corn in Pizza",
+    //   options: [
+    //     {
+    //       value: true,
+    //       label: "Yes",
+    //       trigger: () => {
+    //         props.eventHandler("corn");
+    //         return "Asking for Veggies in Pizza";
+    //       }
+    //     },
+    //     { value: false, label: "No", trigger: "Asking for Veggies in Pizza" }
+    //   ]
+    // },
 
-    {
-      id: "Asking for Veggies in Pizza",
-      message: "Would you like to have veggies in your pizza",
-      trigger: "Adding Veggies in Pizza"
-    },
+    // {
+    //   id: "Asking for Veggies in Pizza",
+    //   message: "Would you like to have veggies in your pizza",
+    //   trigger: "Adding Veggies in Pizza"
+    // },
 
-    {
-      id: "Adding Veggies in Pizza",
-      options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-            props.eventHandler("veggie");
-            return "Done";
-          }
-        },
-        { value: false, label: "No", trigger: "Done" }
-      ]
-    },
+    // {
+    //   id: "Adding Veggies in Pizza",
+    //   options: [
+    //     {
+    //       value: true,
+    //       label: "Yes",
+    //       trigger: () => {
+    //         props.eventHandler("veggie");
+    //         return "Done";
+    //       }
+    //     },
+    //     { value: false, label: "No", trigger: "Done" }
+    //   ]
+    // },
     {
       id: "Done",
       message: "Have a great day !!",
