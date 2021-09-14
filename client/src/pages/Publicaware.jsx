@@ -24,7 +24,11 @@ const Publicaware = (props) => {
           <h2>ARTICLES</h2>
           <br></br>
           <div className="news-card-container">
-            <a href="https://nationalhomeless.org/about-us/projects/awareness-week/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://nationalhomeless.org/about-us/projects/awareness-week/"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -105,7 +109,9 @@ const Publicaware = (props) => {
                   src="img/homelesspicssize6.jpg"
                   alt="article 7"
                 ></img>
-                <div className="article-text">SOCIAL CONDITIONS OF BECOMING HOMELESSNESS- SOME STORIES</div>
+                <div className="article-text">
+                  SOCIAL CONDITIONS OF BECOMING HOMELESSNESS- SOME STORIES
+                </div>
               </div>
             </a>
           </div>
