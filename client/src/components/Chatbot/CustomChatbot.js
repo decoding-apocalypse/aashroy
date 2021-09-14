@@ -4,9 +4,9 @@ import { ThemeProvider } from "styled-components";
 
 function CustomChatbot(props) {
   const config = {
-    width: "300px",
-    height: "400px",
-    floating: true,
+    width: "400px",
+    height: "500px",
+    floating: true
   };
 
   const theme = {
@@ -17,6 +17,8 @@ function CustomChatbot(props) {
     headerFontSize: "25px",
     botBubbleColor: "#00B2B2",
     botFontColor: "#fff",
+    botFontSize:"23px",
+    userFontSize:"23px",
     userBubbleColor: "#fff",
     userFontColor: "#4c4c4c",
   };
@@ -74,46 +76,30 @@ function CustomChatbot(props) {
     },
     {
       id: "Illegal Activities report",
-      message: "Please write your complaint against the illegal activities",
+      message: "Enter your complaint against Illegal activities",
+      trigger: "Illegal Activities Complaint",
+    },
+    {
+      id:"Illegal Activities Complaint",
       user: true,
       trigger: "Location",
     },
     {
       id: "Location",
-      message: "Please enter the location where you saw the event happening?",
-      user: true,
-      trigger: "Thankyou",
+      message: "Please Enter your exact location or nearby landmark",
+      trigger:"Entering location",
     },
     {
-      id: "Asking for Crimes after illegal activities",
-      message: "Do you want to report any  crimes as well? ",
-      options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: "Asking for crimes in your locality",
-        },
-        { value: false, label: "No", trigger: "Done" },
-      ],
+      id: "Entering location",
+      user: true,
+      trigger:"Thankyou",
     },
     {
       id: "Asking for crimes in your locality",
-      message: "Please write your Crime report here...",
-      user: true,
-      trigger: "Location",
+      message: "Please enter your complaint against Crimes..",
+      trigger: "Illegal Activities Complaint",
     },
-    // {
-    //   id: "Crime Report",
-    //   message: "Enter your location",
-    //   user:true,
-    //   trigger:"Thankyou",
-    // },
-    {
-      id: "Location",
-      message: "Please enter the location where you saw the event happening?",
-      user: true,
-      trigger: "Thankyou",
-    },
+    
     {
       id: "Thankyou",
       message:
@@ -121,67 +107,6 @@ function CustomChatbot(props) {
       trigger: "Done",
     },
 
-    // {
-    //   id: "Asking for Mushroom in Pizza",
-    //   message: "Would you like to have mushroom in your pizza",
-    //   trigger: "Adding Mushroom in Pizza",
-    // },
-
-    // {
-    //   id: "Adding Mushroom in Pizza",
-    //   options: [
-    //     {
-    //       value: true,
-    //       label: "Yes",
-    //       trigger: () => {
-    //         props.eventHandler("mushroom");
-    //         return "Asking for Corn in Pizza";
-    //       }
-    //     },
-    //     { value: false, label: "No", trigger: "Asking for Corn in Pizza" }
-    //   ]
-    // },
-    // {
-    //   id: "Asking for Corn in Pizza",
-    //   message: "Would you like to have corn in your pizza",
-    //   trigger: "Adding Corn in Pizza"
-    // },
-
-    // {
-    //   id: "Adding Corn in Pizza",
-    //   options: [
-    //     {
-    //       value: true,
-    //       label: "Yes",
-    //       trigger: () => {
-    //         props.eventHandler("corn");
-    //         return "Asking for Veggies in Pizza";
-    //       }
-    //     },
-    //     { value: false, label: "No", trigger: "Asking for Veggies in Pizza" }
-    //   ]
-    // },
-
-    // {
-    //   id: "Asking for Veggies in Pizza",
-    //   message: "Would you like to have veggies in your pizza",
-    //   trigger: "Adding Veggies in Pizza"
-    // },
-
-    // {
-    //   id: "Adding Veggies in Pizza",
-    //   options: [
-    //     {
-    //       value: true,
-    //       label: "Yes",
-    //       trigger: () => {
-    //         props.eventHandler("veggie");
-    //         return "Done";
-    //       }
-    //     },
-    //     { value: false, label: "No", trigger: "Done" }
-    //   ]
-    // },
     {
       id: "Done",
       message: "Have a great day !!",
