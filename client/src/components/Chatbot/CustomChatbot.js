@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
@@ -20,29 +20,44 @@ function CustomChatbot(props) {
     botFontSize:"23px",
     userFontSize:"23px",
     userBubbleColor: "#fff",
-    userFontColor: "#4c4c4c"
+    userFontColor: "#4c4c4c",
+  };
+
+  const ChatModalStyles = {
+    display: "block",
+    position: "fixed",
+    bottom: "100px",
+    right: "32px",
+    padding: "3rem 1.5rem",
+    background: "#f7f72d",
+    zIndex: "100",
+    fontSize: "1.2rem",
+    borderRadius: "12px",
+    boxShadow: "2px 2px 20px rgb(0,0,0,0.2)",
+    fontWeight: "700",
   };
 
   const steps = [
     {
       id: "Greet",
       message: "Hello, Welcome to our website",
-      trigger: "Ask Name"
+      trigger: "Ask Name",
     },
     {
       id: "Ask Name",
       message: "Please type your name?",
-      trigger: "Waiting user input for name"
+      trigger: "Waiting user input for name",
     },
     {
       id: "Waiting user input for name",
       user: true,
-      trigger: "Asking options to report"
+      trigger: "Asking options to report",
     },
     {
       id: "Asking options to report",
-      message: "Hi {previousValue}, Please click on what you want to report today!",
-      trigger: "Displaying options to report"
+      message:
+        "Hi {previousValue}, Please click on what you want to report today!",
+      trigger: "Displaying options to report",
     },
     {
       id: "Displaying options to report",
@@ -50,12 +65,16 @@ function CustomChatbot(props) {
         {
           value: "crimes",
           label: "Crimes",
-          trigger: "Asking for crimes in your locality"
+          trigger: "Asking for crimes in your locality",
         },
-        { value: "Illegal Activities", label: "Illegal Activities", trigger: "Illegal Activities report" }
-      ]
+        {
+          value: "Illegal Activities",
+          label: "Illegal Activities",
+          trigger: "Illegal Activities report",
+        },
+      ],
     },
-    { 
+    {
       id: "Illegal Activities report",
       message: "Enter your complaint against Illegal activities",
       trigger: "Illegal Activities Complaint",
@@ -83,19 +102,35 @@ function CustomChatbot(props) {
     
     {
       id: "Thankyou",
-      message: "Thankyou! for your complaint. We are working hard to look into your complaint",
+      message:
+        "Thankyou! for your complaint. We are working hard to look into your complaint",
       trigger: "Done",
     },
 
     {
       id: "Done",
       message: "Have a great day !!",
-      end: true
-    }
+      end: true,
+    },
   ];
+
+  const divRef = useRef();
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      divRef.current.style.display = "none";
+    }, 5000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
+      <div ref={divRef} style={ChatModalStyles}>
+        Send me your Complaint
+      </div>
       <ChatBot steps={steps} {...config} />
     </ThemeProvider>
   );
