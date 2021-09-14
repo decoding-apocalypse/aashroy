@@ -18,9 +18,12 @@ const Money = lazy(() => import("./pages/Money"));
 const Stuffs = lazy(() => import("./pages/Stuffs"));
 const Publicaware = lazy(() => import("./pages/Publicaware"));
 const Developer = lazy(() => import("./pages/Developer"));
-const Error404 = lazy(() => import("./pages/Error404"));
 const Report = lazy(() => import("./pages/Report"));
 const Upload = lazy(() => import("./pages/Upload"));
+const Login = lazy(() => import("./pages/Login"));
+const Signup = lazy(() => import("./pages/Signup"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
+const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
   return (
@@ -28,7 +31,6 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-
           <Route exact path="/">
             <Home title="Home | Aashroy" />
           </Route>
@@ -63,6 +65,18 @@ function App() {
 
           <Route exact path="/upload">
             <Upload title="Upload | Aashroy" />
+          </Route>
+
+          <Route exact path="/login">
+            <Login title="Login | Aashroy" />
+          </Route>
+
+          <Route exact path="/signup">
+            <Signup title="Signup | Aashroy" />
+          </Route>
+
+          <Route exact path="/forgotpassword">
+            <ForgotPassword title="Forgot Password | Aashroy" />
           </Route>
 
           <Route path="/">
