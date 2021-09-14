@@ -3,7 +3,7 @@ import React from "react";
 function Veggie() {
   return (
     <div>
-      <div className="vegies">
+      {/* <div className="vegies">
         <div className="veg-1" />
         <div className="veg-2" />
         <div className="veg-3" />
@@ -17,7 +17,7 @@ function Veggie() {
         <div className="veg-11" />
         <div className="veg-12" />
         <div className="veg-13" />
-      </div>
+      </div> */}
     </div>
   );
 }
