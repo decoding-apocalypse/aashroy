@@ -6,7 +6,6 @@
 
 .signupContainer {
   width: 80%;
-  height: 70vh;
   margin: auto;
   padding: 2rem;
   background-color: white;
@@ -84,4 +83,50 @@
 .icons img {
   width: 42px;
   margin: 0 0.5rem;
+}
+
+
+@media only screen and (max-width:1024px){
+
+  .left{
+
+    width: 40%;
+  }
+
+  .right{
+    width: 60%;
+  }
+
+  .icons img{
+  height:28px;
+  width: 28px;
+  }
+
+}
+
+@media only screen and (max-width:815px){
+
+  .left{
+    display: none;
+  }
+  .right{
+    width: 100%;
+  }
+
+  .icons img{
+  height:19px;
+  width: 19px;
+  margin: 5px;
+  }
+
+}
+
+
+@media only screen and (max-width: 583px)
+{
+  
+.signupContainer{
+  width: 88%;
+}
+
 }
