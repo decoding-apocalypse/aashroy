@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./css/Publicaware.css";
 
@@ -14,7 +15,9 @@ const Publicaware = (props) => {
         <div className="sos">Society</div>
       </div>
       <div className="logo-container">
-        <div className="logo"></div>
+        <div className="logo">
+          <img src="./img/icons/fav-logo.png"></img>
+        </div>
       </div>
 
       <div className="aware-content">
@@ -24,16 +27,16 @@ const Publicaware = (props) => {
           <h2>ARTICLES</h2>
           <br></br>
           <div className="news-card-container">
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img className="article-image" src="img/homelesspic.jpg" alt="article 1"></img>
                 <div className="article-text">
                   Article 1
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -42,9 +45,9 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 2</div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -53,9 +56,9 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 3</div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -64,9 +67,9 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 4</div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -75,9 +78,9 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 5</div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -86,9 +89,9 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 6</div>
               </div>
-            </a>
+            </Link>
 
-            <a href="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
               <div className="news-card">
                 <img
                   className="article-image"
@@ -97,7 +100,7 @@ const Publicaware = (props) => {
                 ></img>
                 <div className="article-text">Article 7</div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
