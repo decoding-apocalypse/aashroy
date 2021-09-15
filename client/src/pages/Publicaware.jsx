@@ -14,7 +14,9 @@ const Publicaware = (props) => {
         <div className="sos">Society</div>
       </div>
       <div className="logo-container">
-        <div className="logo"></div>
+        <div className="logo">
+          <img src="./img/icons/fav-logo.png"></img>
+        </div>
       </div>
 
       <div className="aware-content">
@@ -42,7 +44,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -55,7 +61,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.narayanseva.org/blog/homelessness-in-india">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.narayanseva.org/blog/homelessness-in-india"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -68,7 +78,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://en.wikipedia.org/wiki/Homelessness_in_India">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://en.wikipedia.org/wiki/Homelessness_in_India"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -79,7 +93,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -90,7 +108,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://givingcompass.org/article/homelessness/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://givingcompass.org/article/homelessness/"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -103,7 +125,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
