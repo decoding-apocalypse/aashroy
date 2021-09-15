@@ -118,6 +118,11 @@
   width: 19px;
   margin: 5px;
   }
+ .right form button {
+  margin: auto;
+  padding: 0.7rem 1.5rem;
+  
+}
 
 }
 
@@ -128,5 +133,6 @@
 .signupContainer{
   width: 88%;
 }
+
 
 }
