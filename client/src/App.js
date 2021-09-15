@@ -47,9 +47,13 @@ function App() {
             <Money title="Donate Money | Aakanksha" />
           </Route>
 
-          <Route exact path="/donation/stuffs">
-            <Stuffs title="Donate Stuffs | Aakanksha" />
-          </Route>
+          <Route
+            exact
+            path="/donation/stuffs"
+            render={(routeProps) => (
+              <Stuffs {...routeProps} title="Donate Stuffs | Aakanksha" />
+            )}
+          />
 
           <Route exact path="/public-awareness">
             <Publicaware title="Public Awareness | Aakanksha" />
