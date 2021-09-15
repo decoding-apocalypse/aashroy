@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./css/Money.module.css";
 
@@ -15,6 +16,9 @@ const Money = (props) => {
     <main className={styles.money}>
       <h1 className="heading">The society needs your valuable contribution</h1>
       <div className={styles.row}>
+        <Link to="/donation" className={styles.back}>
+          Back
+        </Link>
         <div className={styles.info}>
           <img src="/img/donate.jpg" alt="donate" />
           <p>
@@ -31,21 +35,42 @@ const Money = (props) => {
                 <label htmlFor="oneTime" className={styles.donationFrequency}>
                   One time
                 </label>
-                <input type="checkbox" name="frequency" id="oneTime" />
+                <input type="radio" name="frequency" id="oneTime" />
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="monthly" className={styles.donationFrequency}>
                   Monthly
                 </label>
-                <input type="checkbox" name="frequency" id="monthly" />
+                <input type="radio" name="frequency" id="monthly" />
               </div>
             </div>
             <div className={styles.moneyBtnContainer}>
-              <input type="button" value="50" className={styles.moneyBtn} />
-              <input type="button" value="100" className={styles.moneyBtn} />
-              <input type="button" value="500" className={styles.moneyBtn} />
-              <input type="button" value="1000" className={styles.moneyBtn} />
               <input
+                type="button"
+                value="50"
+                name="amount"
+                className={styles.moneyBtn}
+              />
+              <input
+                type="button"
+                value="100"
+                name="amount"
+                className={styles.moneyBtn}
+              />
+              <input
+                type="button"
+                value="500"
+                name="amount"
+                className={styles.moneyBtn}
+              />
+              <input
+                type="button"
+                value="1000"
+                name="amount"
+                className={styles.moneyBtn}
+              />
+              <input
+                name="amount"
                 type="number"
                 min="1"
                 max="10000"

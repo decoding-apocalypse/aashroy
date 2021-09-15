@@ -32,55 +32,55 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <Home title="Home | Aashroy" />
+            <Home title="Home | Aakanksha" />
           </Route>
 
           <Route exact path="/developers">
-            <Developer title="Developers | Aashroy" />
+            <Developer title="Developers | Aakanksha" />
           </Route>
 
           <Route exact path="/donation">
-            <Donation title="Donation | Aashroy" />
+            <Donation title="Donation | Aakanksha" />
           </Route>
 
           <Route exact path="/donation/money">
-            <Money title="Donate Money | Aashroy" />
+            <Money title="Donate Money | Aakanksha" />
           </Route>
 
           <Route exact path="/donation/stuffs">
-            <Stuffs title="Donate Stuffs | Aashroy" />
+            <Stuffs title="Donate Stuffs | Aakanksha" />
           </Route>
 
           <Route exact path="/public-awareness">
-            <Publicaware title="Public Awareness | Aashroy" />
+            <Publicaware title="Public Awareness | Aakanksha" />
           </Route>
 
           <Route exact path="/about">
-            <AboutUs title="AboutUs | Aashroy" />
+            <AboutUs title="AboutUs | Aakanksha" />
           </Route>
 
           <Route exact path="/report">
-            <Report title="Report | Aashroy" />
+            <Report title="Report | Aakanksha" />
           </Route>
 
           <Route exact path="/upload">
-            <Upload title="Upload | Aashroy" />
+            <Upload title="Upload | Aakanksha" />
           </Route>
 
           <Route exact path="/login">
-            <Login title="Login | Aashroy" />
+            <Login title="Login | Aakanksha" />
           </Route>
 
           <Route exact path="/signup">
-            <Signup title="Signup | Aashroy" />
+            <Signup title="Signup | Aakanksha" />
           </Route>
 
           <Route exact path="/forgotpassword">
-            <ForgotPassword title="Forgot Password | Aashroy" />
+            <ForgotPassword title="Forgot Password | Aakanksha" />
           </Route>
 
           <Route path="/">
-            <Error404 title="Oops Error | Aashroy" />
+            <Error404 title="Oops Error | Aakanksha" />
           </Route>
         </Switch>
         <Footer />
