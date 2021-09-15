@@ -13,11 +13,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+#home-map {
+  position: relative;
+}
 
 #home-map img {
+  position: relative;
   /* background-color: var(--theme1-070); */
-  width: 90vw;
-  height: 100%;
+  width: 90%;
+  /* height: 100%; */
 }
 
 #upload-png {
