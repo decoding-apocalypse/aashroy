@@ -22,9 +22,17 @@
     transform: scale(1.02);
 }
 
+.logo{
+    border:1px rgb(255, 249, 249) solid;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-color: rgb(247, 247, 247);
+}
+
 .logo-container{
     position: relative;
-    bottom: 30px;
+    bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +43,7 @@
     height: 175px;
     width: 305px;
     z-index: 3;
+    padding: 5px;
 }
 
 .logo-img{
@@ -44,7 +53,7 @@
 
 .aware-content{
     position: relative;
-    bottom: 140px;
+    bottom: 170px;
     margin: 40px 40px 0;
 }
 
@@ -154,7 +163,7 @@
 .fundtools{
     padding: 5px;
     height: 50%;
-   background-color: #9e45f1;
+   background-color: var(--theme1-100);
 
 }
 
@@ -164,7 +173,7 @@
 }
 
 .bar{
-    background-color: rgb(211, 57, 185);
+    background-color: var(--theme2-100);
     width: 80%;
 }
 
@@ -469,8 +478,6 @@
     box-shadow: 1px 4px 10px 3px rgba(0, 0, 0, 0.2);
     margin: 8px;
 }
-
-
 
 
 .fundtools>h5{
