@@ -15,7 +15,7 @@ const Publicaware = (props) => {
       </div>
       <div className="logo-container">
         <div className="logo">
-          <img src="./img/icons/fav-logo.png"></img>
+          <img src="./img/icons/fav-logo.png" alt="logo" />
         </div>
       </div>
 
@@ -46,7 +46,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month"
             >
               <div className="news-card">
@@ -63,7 +63,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://www.narayanseva.org/blog/homelessness-in-india"
             >
               <div className="news-card">
@@ -80,7 +80,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://en.wikipedia.org/wiki/Homelessness_in_India"
             >
               <div className="news-card">
@@ -95,7 +95,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness"
             >
               <div className="news-card">
@@ -110,7 +110,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://givingcompass.org/article/homelessness/"
             >
               <div className="news-card">
@@ -127,7 +127,7 @@ const Publicaware = (props) => {
 
             <a
               target="_blank"
-              rel="noreferrer" 
+              rel="noreferrer"
               href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3"
             >
               <div className="news-card">
