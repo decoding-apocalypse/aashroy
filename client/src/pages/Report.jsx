@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Report.css";
-import Pizza from "../components/Chatbot/pizza/Pizza";
+import CustomChatbot from "../components/Chatbot/CustomChatbot";
 
 const Report = (props) => {
+  const [reportData, setReportData] = useState(null);
+
+  const handleReportData = (data) => {
+    setReportData((prevData) => ({ ...prevData, ...data }));
+  };
+
+  console.log(reportData);
+
   return (
     <main className="report">
       <div className="report-content">
@@ -14,31 +22,49 @@ const Report = (props) => {
           complaint or want to report a crime or any illegal atrocities against
           the helpless, please feel free to report through an anonymous
           reporting mechanism where we try to help and build the society through
-          your hands.
+          your hands. <br />
+          You can also share your valuable feedback to us which can help us to
+          serve the community better.
         </p>
-        <button type="button" class="btn btn-outline-info">Complaint Now</button>
+        <button type="button" className="btn btn-outline-info">
+          Complaint Now
+        </button>
       </div>
-      <div >
-        <img className="report-bg" src="/img/report-bg-1.png" alt="no image" srcset="" />
+      <div>
+        <img className="report-bg" src="/img/report-bg-1.png" alt="nothing" />
       </div>
-      
 
-<div className="report-form">
-    <h3 className="form-heading">Feedback Form for Aakansha</h3>
-  <form>
-    <label for="fname">Your Name</label>
-    <input type="text" className="fname" name="firstname" placeholder="Your name.."/>
+      <div className="report-form">
+        <h3 className="form-heading">Feedback Form for Aakansha</h3>
+        <form>
+          <label htmlFor="fname">Your Name</label>
+          <input
+            type="text"
+            className="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
 
-    <label for="lname">Location</label>
-    <input type="text" className="fname" name="lastname" placeholder="Your current location.."/>
- 
-    <label for="lname">Feedback</label>
-    <input type="text" className="fname" name="lastname" placeholder="Your valuable feedback.."/>
-  
-    <input className="submit" type="submit" value="Submit"/>
-  </form>
-</div>
-      <Pizza />
+          <label htmlFor="lname">Location</label>
+          <input
+            type="text"
+            className="fname"
+            name="lastname"
+            placeholder="Your current location.."
+          />
+
+          <label htmlFor="lname">Feedback</label>
+          <input
+            type="text"
+            className="fname"
+            name="lastname"
+            placeholder="Your valuable feedback.."
+          />
+
+          <input className="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+      <CustomChatbot updateData={handleReportData} />
     </main>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import "./css/Publicaware.css";
 
@@ -27,80 +26,120 @@ const Publicaware = (props) => {
           <h2>ARTICLES</h2>
           <br></br>
           <div className="news-card-container">
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://nationalhomeless.org/about-us/projects/awareness-week/"
+            >
               <div className="news-card">
-                <img className="article-image" src="img/homelesspic.jpg" alt="article 1"></img>
+                <img
+                  className="article-image"
+                  src="img/homelesspic.jpg"
+                  alt="article 1"
+                ></img>
                 <div className="article-text">
-                  Article 1
+                  NATIONAL HUNGER & HOMELESSNESS AWARENESS WEEK
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize1.jpg"
                   alt="article 2"
                 ></img>
-                <div className="article-text">Article 2</div>
+                <div className="article-text">
+                  NATIONAL HOMELESS YOUTH AWARENESS MONTH
+                </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.narayanseva.org/blog/homelessness-in-india"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize3.jpg"
                   alt="article 3"
                 ></img>
-                <div className="article-text">Article 3</div>
+                <div className="article-text">
+                  LIFE OF THE HOMELESS IN INDIA
+                </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://en.wikipedia.org/wiki/Homelessness_in_India"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize2.jpg"
                   alt="article 4"
                 ></img>
-                <div className="article-text">Article 4</div>
+                <div className="article-text">WIKI: HOMELESSNESS IN INDIA</div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize4.jpg"
                   alt="article 5"
                 ></img>
-                <div className="article-text">Article 5</div>
+                <div className="article-text">PREVENTING HOMELESSNESS</div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://givingcompass.org/article/homelessness/"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize5.jpg"
                   alt="article 6"
                 ></img>
-                <div className="article-text">Article 6</div>
+                <div className="article-text">
+                  HOMELESS - WHAT TO KNOW AND HOW TO HELP
+                </div>
               </div>
-            </Link>
+            </a>
 
-            <Link to="https://www.ncbi.nlm.nih.gov/books/NBK218239/">
+            <a
+              target="_blank"
+              rel="noreferrer" 
+              href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize6.jpg"
                   alt="article 7"
                 ></img>
-                <div className="article-text">Article 7</div>
+                <div className="article-text">
+                  SOCIAL CONDITIONS OF BECOMING HOMELESSNESS- SOME STORIES
+                </div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
 

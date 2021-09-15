@@ -13,8 +13,8 @@ const Footer = (props) => {
         </a>
       </div>
       <div id="copyright-info">
-        <span> Copyright © 2018 </span> |<span> Terms Of Use </span> |
-        <span> Privacy Policy </span>
+        <span> Copyright © 2021 | Decoding-Apocalypse | Terms Of Use |
+         Privacy Policy </span>
       </div>
     </footer>
   );
