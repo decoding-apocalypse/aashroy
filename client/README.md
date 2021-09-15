@@ -1,1 +1,1 @@
-# Client directory of Aashroy Project
+# Client directory of Aakanksha Project

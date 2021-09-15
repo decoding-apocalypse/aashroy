@@ -1,4 +1,4 @@
-# Aashroy - Decoding Apocalypse
+# Aakanksha - Decoding Apocalypse
 
 A mapping system for the homeless people. A JEC Hackathon project. Made by the student of NIT, Silchar, Assam
 

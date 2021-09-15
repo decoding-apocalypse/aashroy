@@ -23,6 +23,7 @@ const Publicaware = (props) => {
         <div className="article-box">
           <br></br>
           <br></br>
+          <br></br>
           <h2>ARTICLES</h2>
           <br></br>
           <div className="news-card-container">
@@ -339,35 +340,23 @@ const Publicaware = (props) => {
 
         <br></br>
         <div className="slogans">
-          <h2 style={{ textAlign: "center" }}>Slogans</h2>
-          <br></br>
-          <br></br>
+          <h2>Slogans</h2>
           <div className="slogan-text">
             <br></br>
             <div className="slogan-text-each">
-              <h3>''You Don't Need A Reason To Help People.''</h3>
+              <span className="quotes">“</span>
+              <h3>You Don't Need A Reason To Help People.</h3>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "right" }}>
-                ''If You Can't Feed a Hundred People, then Feed Just One.''
-              </h3>
+              <span className="quotes">“</span>
+              <h3>If You Can't Feed a Hundred People, then Feed Just One.</h3>
             </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "left" }}>
-                ''We Can't Help Everyone But Everyone Can Help Someone.''
-              </h3>
+              <span className="quotes">“</span>
+              <h3>We Can't Help Everyone But Everyone Can Help Someone.</h3>
             </div>
-            <br></br>
-            <br></br>
           </div>
         </div>
       </div>

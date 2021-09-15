@@ -20,35 +20,37 @@ const Signup = (props) => {
         </div>
         <div className={styles.right}>
           <h2>Sign In</h2>
+
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Name"
-              className={styles.name}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter E-mail"
-              className={styles.email}
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password"
-              className={styles.password}
-              required
-            />
-            <input
-              type="password"
-              name="passwordConf"
-              placeholder="Confirm password"
-              className={styles.password}
-              required
-            />
+            
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Name"
+                className={styles.name}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter E-mail"
+                className={styles.email}
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                className={styles.password}
+                required
+              />
+              <input
+                type="password"
+                name="passwordConf"
+                placeholder="Confirm password"
+                className={styles.password}
+                required
+              />
             <button className={styles.loginBtn}>Signup</button>
           </form>
           <p>

@@ -38,3 +38,27 @@
   opacity: 0.85;
   box-shadow: 1px 1px 4px rgb(151, 151, 151);
 }
+
+@media (max-width: 1200px) {
+  .card {
+    width: 100%;
+  }
+  .money,
+  .stuffs {
+    height: 40vw;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    flex-direction: column;
+  }
+  .money,
+  .stuffs {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    height: fit-content;
+  }
+}
