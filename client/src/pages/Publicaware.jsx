@@ -14,9 +14,7 @@ const Publicaware = (props) => {
         <div className="sos">Society</div>
       </div>
       <div className="logo-container">
-        <div className="logo">
-          <img className="logo-img" src="img/icons/logo.png" alt="logo" />
-        </div>
+        <div className="logo"></div>
       </div>
 
       <div className="aware-content">
@@ -322,14 +320,16 @@ const Publicaware = (props) => {
           <div className="slogan-text">
             <br></br>
             <div className="slogan-text-each">
-              <h3>''You Don't Need A Reason To Help People.''</h3>
+              <h3 style={{paddingLeft: "70px" }}>
+                ''You Don't Need A Reason To Help People.''
+              </h3>
             </div>
             <br></br>
             <br></br>
             <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "right" }}>
+              <h3 style={{ textAlign: "right", paddingRight: "80px" }}>
                 ''If You Can't Feed a Hundred People, then Feed Just One.''
               </h3>
             </div>
@@ -339,7 +339,7 @@ const Publicaware = (props) => {
             <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "left" }}>
+              <h3 style={{ textAlign: "left" , paddingLeft: "70px" }}>
                 ''We Can't Help Everyone But Everyone Can Help Someone.''
               </h3>
             </div>

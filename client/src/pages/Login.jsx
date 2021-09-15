@@ -46,6 +46,11 @@ const Login = (props) => {
           >
             Forgot password?
           </Link>
+          <div className={styles.create}>
+            <Link to="/signup" className="msg">
+              Create an account
+            </Link>
+          </div>
           <div className={styles.externalLinks}>
             <span className={styles.text}>or login using</span>
             <span className={styles.icons}>
