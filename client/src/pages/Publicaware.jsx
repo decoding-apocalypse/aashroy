@@ -14,11 +14,14 @@ const Publicaware = (props) => {
         <div className="sos">Society</div>
       </div>
       <div className="logo-container">
-        <div className="logo"></div>
+        <div className="logo">
+          <img className="logo-img" src="img/icons/logo.png" alt="logo" />
+        </div>
       </div>
 
       <div className="aware-content">
         <div className="article-box">
+          <br></br>
           <br></br>
           <br></br>
           <h2>ARTICLES</h2>
