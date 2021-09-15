@@ -2,11 +2,14 @@ import React from "react";
 
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 
+const libraries = ["places"];
+
 const Map = (props) => {
-  const libraries = ["places"];
+  const { latitude, longitude } = props.location;
+
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyDtie1SmbFIOXlKF7zu1o9ZSPaBA4-JzwM",
-    libraries,
+    libraries: libraries,
   });
 
   if (loadError) return "Error loading maps";
@@ -16,8 +19,8 @@ const Map = (props) => {
       mapContainerStyle={{ width: "100%", height: "100%" }}
       zoom={8}
       center={{
-        lat: 27.395089,
-        lng: 95.614441,
+        lat: latitude,
+        lng: longitude,
       }}
     ></GoogleMap>
   );
