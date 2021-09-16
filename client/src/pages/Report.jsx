@@ -45,12 +45,12 @@ const Report = (props) => {
             placeholder="Your name.."
           />
 
-          <label htmlFor="lname">Location</label>
+          <label htmlFor="email">Email</label>
           <input
             type="text"
             className="fname"
-            name="lastname"
-            placeholder="Your current location.."
+            name="email"
+            placeholder="Your Email Id here"
           />
 
           <label htmlFor="lname">Feedback</label>
