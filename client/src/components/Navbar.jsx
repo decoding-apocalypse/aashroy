@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../context/user-context";
 
 import "./css/Navbar.css";
 
 const Navbar = (props) => {
-  const handleClick = (e) => {
-    console.log(e.target);
+  const userCtx = useContext(UserContext);
+
+  const isLoggedIn = userCtx.successfull;
+
+  const handleLogout = () => {
+    const { email, password } = userCtx;
+    setTimeout(() => {
+      userCtx.logOutUser(email, password);
+    }, 2000);
   };
 
   return (
@@ -28,12 +36,7 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                aria-current="page"
-                to="/"
-                onClick={handleClick}
-              >
+              <Link className="nav-link" aria-current="page" to="/">
                 <span className="hover-anim">Home</span>
               </Link>
             </li>
@@ -68,8 +71,16 @@ const Navbar = (props) => {
               </Link>
             </li>
             <li className="nav-item" id="nav-btns">
-              <Link to="/login">Log In</Link>
-              <Link to="/signup">Sign Up</Link>
+              {!isLoggedIn ? (
+                <>
+                  <Link to="/login">Log In</Link>
+                  <Link to="/signup">Sign Up</Link>
+                </>
+              ) : (
+                <Link onClick={handleLogout} to="/logout">
+                  Logout
+                </Link>
+              )}
             </li>
           </ul>
         </div>
