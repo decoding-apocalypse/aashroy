@@ -70,6 +70,16 @@ const Navbar = (props) => {
                 <span className="hover-anim">Developers</span>
               </Link>
             </li>
+            {isLoggedIn && (
+              <Link id="profile" to="/profile">
+                <div className="user-img">
+                  <img src="/img/icons/user.png" alt={userCtx.name} />
+                </div>
+                <div className="user-details">
+                  <p>{userCtx.name}</p>
+                </div>
+              </Link>
+            )}
             <li className="nav-item" id="nav-btns">
               {!isLoggedIn ? (
                 <>
