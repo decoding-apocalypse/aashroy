@@ -14,7 +14,7 @@ const Report = (props) => {
           complaint or want to report a crime or any illegal atrocities against
           the helpless, please feel free to report through an anonymous
           reporting mechanism where we try to help and build the society through
-          your hands. <br /> <br/>
+          your hands. <br /> <br/ >
           You can also share your valuable feedback to us which can help us to serve the community better.  
           </p>
         <button type="button" className="btn btn-outline-info">Complaint Now</button>
