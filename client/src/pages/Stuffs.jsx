@@ -5,7 +5,7 @@ import UserContext from "../context/user-context";
 
 import styles from "./css/Stuffs.module.css";
 
-const API_KEY_GOOGLE = "AIzaSyDtie1SmbFIOXlKF7zu1o9ZSPaBA4-JzwM";
+const API_KEY_GOOGLE = process.env.REACT_APP_GOOGLE_API;
 
 const Stuffs = (props) => {
   const userCtx = useContext(UserContext);
@@ -245,7 +245,7 @@ const Stuffs = (props) => {
               </a>
             )}
           </div>
-          <div className={styles.card} id="donorDetails">
+          <div className={`${styles.card} ${styles.card4}`} id="donorDetails">
             <h2>Please enter your details</h2>
             <input
               onChange={handleDonor}

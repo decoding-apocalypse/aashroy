@@ -38,7 +38,7 @@ const options = {
 const Map = (props) => {
   const { latitude, longitude } = props.location;
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDtie1SmbFIOXlKF7zu1o9ZSPaBA4-JzwM",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API,
     libraries: libraries,
   });
   const [markers, setMarkers] = React.useState([]);
