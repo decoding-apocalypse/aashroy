@@ -4,9 +4,12 @@
   align-items: center;
 }
 
+.create {
+  display: none;
+}
+
 .loginContainer {
   width: 80%;
-  height: 70vh;
   margin: auto;
   padding: 2rem;
   background-color: white;
@@ -85,4 +88,88 @@
 .icons img {
   width: 42px;
   margin: 0 0.5rem;
+}
+
+.errorMsg {
+  color: rgb(255, 86, 86);
+  margin-bottom: -1rem;
+  text-align: center;
+}
+
+.loggedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loggedIn h2 {
+  font-size: 4rem;
+}
+
+.loggedIn a {
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: var(--theme4-100);
+}
+
+@media only screen and (max-width: 1020px) {
+  .left {
+    width: 40%;
+  }
+
+  .right {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .right form input {
+    width: 90%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    display: none;
+  }
+  .create {
+    position: relative;
+    bottom: 15px;
+    display: block;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+  .right form button {
+    margin: auto;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .loginContainer {
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .right form input {
+    width: 100%;
+  }
+
+  .errorMsg {
+    font-size: 0.8rem;
+  }
+  .icons img {
+    width: 23px;
+    margin: 0 0.5rem;
+  }
+
+  .create {
+    font-size: 1rem;
+  }
 }

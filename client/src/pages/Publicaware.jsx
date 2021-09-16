@@ -14,17 +14,24 @@ const Publicaware = (props) => {
         <div className="sos">Society</div>
       </div>
       <div className="logo-container">
-        <div className="logo"></div>
+        <div className="logo">
+          <img src="./img/icons/fav-logo.png" alt="logo" />
+        </div>
       </div>
 
       <div className="aware-content">
         <div className="article-box">
           <br></br>
           <br></br>
+          <br></br>
           <h2>ARTICLES</h2>
           <br></br>
           <div className="news-card-container">
-            <a href="https://nationalhomeless.org/about-us/projects/awareness-week/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://nationalhomeless.org/about-us/projects/awareness-week/"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -37,7 +44,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.nctsn.org/resources/public-awareness/national-homeless-youth-awareness-month"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -50,7 +61,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.narayanseva.org/blog/homelessness-in-india">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.narayanseva.org/blog/homelessness-in-india"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -63,7 +78,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://en.wikipedia.org/wiki/Homelessness_in_India">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://en.wikipedia.org/wiki/Homelessness_in_India"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -74,7 +93,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.homelesshub.ca/about-homelessness/homelessness-101/preventing-homelessness"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -85,7 +108,11 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://givingcompass.org/article/homelessness/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://givingcompass.org/article/homelessness/"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
@@ -98,14 +125,20 @@ const Publicaware = (props) => {
               </div>
             </a>
 
-            <a href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0646-3"
+            >
               <div className="news-card">
                 <img
                   className="article-image"
                   src="img/homelesspicssize6.jpg"
                   alt="article 7"
                 ></img>
-                <div className="article-text">SOCIAL CONDITIONS OF BECOMING HOMELESSNESS- SOME STORIES</div>
+                <div className="article-text">
+                  SOCIAL CONDITIONS OF BECOMING HOMELESSNESS- SOME STORIES
+                </div>
               </div>
             </a>
           </div>
@@ -307,35 +340,23 @@ const Publicaware = (props) => {
 
         <br></br>
         <div className="slogans">
-          <h2 style={{ textAlign: "center" }}>Slogans</h2>
-          <br></br>
-          <br></br>
+          <h2>Slogans</h2>
           <div className="slogan-text">
             <br></br>
             <div className="slogan-text-each">
-              <h3>''You Don't Need A Reason To Help People.''</h3>
+              <span className="quotes">“</span>
+              <h3>You Don't Need A Reason To Help People.</h3>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "right" }}>
-                ''If You Can't Feed a Hundred People, then Feed Just One.''
-              </h3>
+              <span className="quotes">“</span>
+              <h3>If You Can't Feed a Hundred People, then Feed Just One.</h3>
             </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
 
             <div className="slogan-text-each">
-              <h3 style={{ textAlign: "left" }}>
-                ''We Can't Help Everyone But Everyone Can Help Someone.''
-              </h3>
+              <span className="quotes">“</span>
+              <h3>We Can't Help Everyone But Everyone Can Help Someone.</h3>
             </div>
-            <br></br>
-            <br></br>
           </div>
         </div>
       </div>

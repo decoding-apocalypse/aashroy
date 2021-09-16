@@ -12,13 +12,13 @@ const Card = (props) => {
       <div className="Card-details">
         <div className="Card-details-name">{name}</div>
         <div className="Card-details-links">
-          <a href={links.github}>
+          <a target="_blank" rel="noreferrer" href={links.github}>
             <img src="/img/icons/github.png" alt="Github" />
           </a>
-          <a href={links.linkedin}>
+          <a target="_blank" rel="noreferrer" href={links.linkedin}>
             <img src="/img/icons/linkedin.png" alt="LinkedIn" />
           </a>
-          <a href={links.facebook}>
+          <a target="_blank" rel="noreferrer" href={links.facebook}>
             <img src="/img/icons/facebook.png" alt="Facebook" />
           </a>
         </div>

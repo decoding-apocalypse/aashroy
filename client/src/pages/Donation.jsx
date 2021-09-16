@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./css/Donation.module.css";
 
@@ -13,12 +14,12 @@ const Donation = (props) => {
         <div className={styles.money}>
           <img src="/img/icons/money.png" alt="money" />
           <p>Donate money</p>
-          <a href="/donation/money">Donate</a>
+          <Link to="/donation/money">Donate</Link>
         </div>
         <div className={styles.stuffs}>
           <img src="/img/icons/stuffs.png" alt="stuffs" />
           <p>Donate food, clothes or medicines</p>
-          <a href="/donation/stuffs">Donate</a>
+          <Link to="/donation/stuffs">Donate</Link>
         </div>
       </div>
     </main>

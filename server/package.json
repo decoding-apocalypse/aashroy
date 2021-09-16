@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "The server directory for Aashroy project",
+  "description": "The server directory for Aakanksha project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

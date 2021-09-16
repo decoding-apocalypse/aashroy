@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./css/Home.css";
 
@@ -89,9 +90,9 @@ const Home = (props) => {
         <img src="img/assam.png" alt="Assam map"></img>
       </div>
       <div id="upload-img">
-        <a className="donate-button" href="/upload">
+        <Link className="donate-button" to="/upload">
           Upload Now
-        </a>
+        </Link>
       </div>
       <div id="home-info">
         <h2>How we complete local needs</h2>

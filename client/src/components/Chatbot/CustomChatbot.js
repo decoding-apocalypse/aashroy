@@ -6,7 +6,7 @@ function CustomChatbot(props) {
   const config = {
     width: "400px",
     height: "500px",
-    floating: true
+    floating: true,
   };
 
   const theme = {
@@ -17,8 +17,8 @@ function CustomChatbot(props) {
     headerFontSize: "25px",
     botBubbleColor: "#bfa2db",
     botFontColor: "#fff",
-    botFontSize:"23px",
-    userFontSize:"23px",
+    botFontSize: "23px",
+    userFontSize: "23px",
     userBubbleColor: "#fff",
     userFontColor: "#4c4c4c",
   };
@@ -70,36 +70,44 @@ function CustomChatbot(props) {
       trigger: "Illegal Activities Complaint",
     },
     {
-      id:"Illegal Activities Complaint",
+      id: "Illegal Activities Complaint",
       user: true,
+      validator: (value) => {
+        // eslint-disable-next-line
+        if (/^[A-Za-z][A-Za-z\'\-]+([\ A-Za-z][A-Za-z\'\-]+)*/.test(value)) {
+          props.updateData({ report: value });
+          return true;
+        } else {
+          return "Please input alphabet characters only.";
+        }
+      },
       trigger: "Location",
     },
     {
       id: "Location",
       message: "Please Enter your exact location or nearby landmark",
-      trigger:"Entering location",
+      trigger: "Entering location",
     },
     {
       id: "Entering location",
       user: true,
-      trigger:"anything else",
-    },
-    {
-       id: "anything else",
-       message:"Is there anything else you want to report",
-       trigger: "anything else input"
-    },
-    {
-      id:"anything else input",
-      user:true,
-      trigger:"Thankyou"
+      validator: (value) => {
+        // eslint-disable-next-line
+        if (/^[A-Za-z][A-Za-z\'\-]+([\ A-Za-z][A-Za-z\'\-]+)*/.test(value)) {
+          props.updateData({ location: value });
+          return true;
+        } else {
+          return "Please input alphabet characters only.";
+        }
+      },
+      trigger: "Thankyou",
     },
     {
       id: "Asking for crimes in your locality",
       message: "Please enter your complaint against Crimes..",
       trigger: "Illegal Activities Complaint",
     },
-    
+
     {
       id: "Thankyou",
       message:
