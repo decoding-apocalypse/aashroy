@@ -24,7 +24,9 @@
 .card {
   display: none;
   text-align: center;
-  margin: 4rem 0;
+  padding: 4rem 0;
+  height: 100%;
+  position: relative;
 }
 
 .card h2 {
@@ -33,11 +35,60 @@
 
 .card input,
 .card button {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border: 2px solid var(--theme1-100);
   color: rgb(51, 51, 51);
+  text-align: center;
+}
+
+.card .btn {
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--theme1-100);
+  color: rgb(51, 51, 51);
+  text-align: center;
+  background-color: var(--theme1-070);
+  cursor: pointer;
+}
+
+.card .btn:hover {
+  opacity: 0.85;
+}
+
+.card input {
+  width: 80%;
+  margin-bottom: 1rem;
 }
 
 .card button {
   background-color: var(--theme1-070);
+}
+
+.card button:hover {
+  opacity: 0.85;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.inputGroup label {
+  width: 20%;
+}
+
+.inputGroup input {
+  width: 30%;
+}
+
+.next {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.card3 label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }

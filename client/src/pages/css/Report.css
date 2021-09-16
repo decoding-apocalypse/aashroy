@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 .report-content
 {
     text-align: center;
-    font-family: 'Anton', sans-serif;
-    color: black;
+    /* font-family: 'Anton', sans-serif; */
+    /* color: black; */
     letter-spacing: 1px;
     margin: 20px;
    
@@ -34,10 +34,12 @@
 }
 .report-bg
 {
-    width: 50% !important;
-    position: absolute ;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column !important;
     left: 50%;
-    top: 30%;
+    top: 18%;
     z-index: 2;
 }
 
@@ -94,4 +96,55 @@
     margin-top: 15rem;
     color: black;
     
+  }
+
+  @media (min-width: 360px) and (max-width:1280px)
+  {
+    .report
+    {
+      padding: 0;
+      margin: 0;
+    }
+    .report-bg
+    {
+      /* display: flex; */
+      position: absolute;
+      top: 20%;
+      left: 25%;
+      width: 20%;
+      height: 30%;
+    }
+    .report-content
+    {
+      height: 30vh;
+    }
+    .report-main
+    {
+      width: 100vw;
+      z-index: 2;
+      padding: 2px;
+    }
+    p
+    {
+      font-size: 18px;
+      top: 10%;
+      padding: 20px;
+    }
+    .btn-outline-info
+    {
+      width: max-content;
+      margin: 10px;
+      position: relative;
+      left: 18%;
+    }
+    .report-form
+    {
+      margin-top: 10px;
+    }
+    .submit
+    {
+      width: max-content;
+      position: relative;
+      left: 15%;
+    }
   }

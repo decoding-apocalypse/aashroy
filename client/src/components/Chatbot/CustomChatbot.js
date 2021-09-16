@@ -12,10 +12,10 @@ function CustomChatbot(props) {
   const theme = {
     background: "white",
     fontFamily: "Arial, Helvetica, sans-serif",
-    headerBgColor: "#00B2B2",
+    headerBgColor: "#bfa2db",
     headerFontColor: "#fff",
     headerFontSize: "25px",
-    botBubbleColor: "#00B2B2",
+    botBubbleColor: "#bfa2db",
     botFontColor: "#fff",
     botFontSize: "23px",
     userFontSize: "23px",
@@ -41,22 +41,12 @@ function CustomChatbot(props) {
     {
       id: "Greet",
       message: "Hello, Welcome to our website",
-      trigger: "Ask Name",
-    },
-    {
-      id: "Ask Name",
-      message: "Please type your name?",
-      trigger: "Waiting user input for name",
-    },
-    {
-      id: "Waiting user input for name",
-      user: true,
       trigger: "Asking options to report",
     },
     {
       id: "Asking options to report",
       message:
-        "Hi {previousValue}, Please click on what you want to report today!",
+        "Hi, Please click on what you want to report today!",
       trigger: "Displaying options to report",
     },
     {
