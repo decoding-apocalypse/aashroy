@@ -1,7 +1,21 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const PORT = process.env.port || 3000;
 const path = require("path");
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(
+    `mongodb+srv://decodingApocalypse:${process.env.MONGODB_PASS}@aashroy.za9ce.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+  )
+  .then(() => {
+    console.log("Database connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // Routes
 const userRoutes = require("./routes/user");
