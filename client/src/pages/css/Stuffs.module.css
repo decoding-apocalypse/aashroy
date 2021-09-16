@@ -92,3 +92,84 @@
   font-size: 1.5rem;
   margin-right: 1rem;
 }
+
+
+@media screen and (min-width: 920px) and (max-width: 1130px) {
+  .tab a {
+    padding: 0.3rem 0.6rem;
+    font-size: 13.5px;
+  }
+
+  .paymentCard {
+    width: 90%;
+  }
+
+  .card .btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  .navigation {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .tab a {
+    padding: 0.3rem 0.6rem;
+    font-size: 13.5px;
+  }
+
+  .tab {
+    margin-top: 20px;
+  }
+
+  .paymentCard {
+    width: 95%;
+    margin: auto;
+  }
+
+  .card h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .card .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 13px;
+    /* margin-top: -1rem; */
+  }
+
+  .inputGroup {
+    padding: 0;
+  }
+
+  .inputGroup input {
+    width: 100%;
+    margin: auto;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .card {
+    padding-top: 2rem;
+  }
+
+  .card3 label {
+    font-size: 1rem;
+  }
+
+  .card3 input {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .card4 input {
+    padding: 0.4rem 0.6rem;
+    width: 100%;
+  }
+}
