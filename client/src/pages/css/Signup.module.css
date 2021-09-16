@@ -85,54 +85,74 @@
   margin: 0 0.5rem;
 }
 
+.errorMsg {
+  color: rgb(255, 86, 86);
+  margin-bottom: -1rem;
+  text-align: center;
+}
 
-@media only screen and (max-width:1024px){
+.signedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .left{
+.signedIn h2 {
+  font-size: 4rem;
+}
 
+.signedIn a {
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: var(--theme4-100);
+}
+
+@media only screen and (max-width: 1024px) {
+  .left {
     width: 40%;
   }
 
-  .right{
+  .right {
     width: 60%;
   }
 
-  .icons img{
-  height:28px;
-  width: 28px;
+  .icons img {
+    height: 28px;
+    width: 28px;
   }
-
 }
 
-@media only screen and (max-width:815px){
-
-  .left{
+@media only screen and (max-width: 815px) {
+  .left {
     display: none;
   }
-  .right{
+  .right {
     width: 100%;
   }
 
-  .icons img{
-  height:19px;
-  width: 19px;
-  margin: 5px;
+  .icons img {
+    height: 19px;
+    width: 19px;
+    margin: 5px;
   }
- .right form button {
-  margin: auto;
-  padding: 0.7rem 1.5rem;
-  
+  .right form button {
+    margin: auto;
+    padding: 0.7rem 1.5rem;
+  }
 }
 
-}
+@media only screen and (max-width: 583px) {
+  .signupContainer {
+    width: 95%;
+  }
 
+  .right form input {
+    width: 100%;
+  }
 
-@media only screen and (max-width: 583px)
-{
-  
-.signupContainer{
-  width: 88%;
-}
-
-
+  .errorMsg {
+    font-size: 0.8rem;
+  }
 }
