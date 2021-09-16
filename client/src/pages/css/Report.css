@@ -1,38 +1,50 @@
+.report-content {
+  text-align: center;
+  /* font-family: 'Anton', sans-serif; */
+  /* color: black; */
+  letter-spacing: 1px;
+  margin: 20px;
+}
+.report-main {
+  text-align: justify;
+  padding: 40px;
+  font-size: 23px;
+  color: black;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.report-content
-{
-    text-align: center;
-    /* font-family: 'Anton', sans-serif; */
-    /* color: black; */
-    letter-spacing: 1px;
-    margin: 20px;
-   
+.btn-outline-info {
+  position: relative;
+  width: 40%;
+  line-height: 40px;
+  margin: 60px;
+  padding: 5px 40px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--theme1-100);
+  transition: color 0.2s;
+  border-radius: 20px;
+  color: var(--theme1-100);
+  font-size: 20px;
+  font-weight: bold;
 }
-.report-main
-{
-    text-align: justify;
-    padding: 40px;
-    font-size: 23px;
-    color: black;
-    width: 50%;
+
+.reportContainer {
+  display: flex;
 }
-.btn-outline-info
-{
-    position: relative;
-    width: 40%;
-    line-height: 40px;
-    margin: 60px;
-    padding: 5px 40px;
-    position: relative;
-    overflow: hidden;
-     border: 3px solid var(--theme1-100);
-    transition: color 0.2s;
-    border-radius: 20px;
-    color: var(--theme1-100);
-    font-size: 20px;
-    font-weight: bold;
+
+.report-bg {
+  width: 40%;
 }
-.report-bg
+
+.report-bg img {
+  width: 100%;
+}
+
+/* .report-bg
 {
     width: 50%;
     position: absolute;
@@ -41,110 +53,83 @@
     left: 50%;
     top: 18%;
     z-index: 2;
-}
+} */
 
 /* report-form */
 
-.fname{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .submit {
-    width: 100%;
-    /* background-color: #4CAF50; */
-    /* color: white; */
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    width: 40%;
-    line-height: 40px;
-    margin: 60px;
-    padding: 5px 40px;
-    position: relative;
-    top: 120%;
-    overflow: hidden;
-     border: 3px solid var(--theme1-100);
-    transition: color 0.2s;
-    border-radius: 20px;
-    /* color: var(--theme1-100); */
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .submit:hover {
-    background-color:  var(--theme1-100);
-    
-  }
-  .form-heading
-  {
-      text-align: center;
-  }
-  .report-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    position: relative;
-    margin-top: 15rem;
-    color: black;
-    
+.fname {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.report-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-form form input {
+  text-align: center;
+}
+
+.report-form input::placeholder {
+  text-align: center;
+}
+
+.submit {
+  width: 40%;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--theme1-100);
+}
+
+.submit:hover {
+  background-color: var(--theme1-100);
+}
+.form-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.report-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: relative;
+  color: black;
+}
+
+@media (max-width: 1080px) {
+  .report-main p {
+    font-size: 1rem;
   }
 
-  @media (min-width: 360px) and (max-width:1280px)
-  {
-    .report
-    {
-      padding: 0;
-      margin: 0;
-    }
-    .report-bg
-    {
-      /* display: flex; */
-      position: absolute;
-      top: 20%;
-      left: 25%;
-      width: 20%;
-      height: 30%;
-    }
-    .report-content
-    {
-      height: 30vh;
-    }
-    .report-main
-    {
-      width: 100vw;
-      z-index: 2;
-      padding: 2px;
-    }
-    p
-    {
-      font-size: 18px;
-      top: 10%;
-      padding: 20px;
-    }
-    .btn-outline-info
-    {
-      width: max-content;
-      margin: 10px;
-      position: relative;
-      left: 18%;
-    }
-    .report-form
-    {
-      margin-top: 10px;
-    }
-    .submit
-    {
-      width: max-content;
-      position: relative;
-      left: 15%;
-    }
+  .report-main button {
+    width: 60%;
   }
+}
+
+@media (max-width: 860px) {
+  .reportContainer {
+    flex-direction: column;
+  }
+  .report-main {
+    width: 100%;
+  }
+  .report-bg {
+    width: 80%;
+    margin: auto;
+  }
+
+  .report-main button {
+    margin: 20px;
+  }
+}
