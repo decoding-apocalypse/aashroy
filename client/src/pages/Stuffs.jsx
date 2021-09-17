@@ -5,7 +5,7 @@ import UserContext from "../context/user-context";
 
 import styles from "./css/Stuffs.module.css";
 
-const API_KEY_GOOGLE = "AIzaSyDtie1SmbFIOXlKF7zu1o9ZSPaBA4-JzwM";
+const API_KEY_GOOGLE = process.env.REACT_APP_GOOGLE_API;
 
 const Stuffs = (props) => {
   const userCtx = useContext(UserContext);
@@ -97,33 +97,53 @@ const Stuffs = (props) => {
   return (
     <main className={styles.stuffs}>
       <div className={styles.navigation}>
-        {/* eslint-disable-next-line */}
-        <div className={`${styles.tab} ${styles.current}`}>
-          <a href="#dropLocation" onClick={handleClick}>
-            Drop your location
-          </a>
-        </div>
+        <a href="#dropLocation" onClick={handleClick}>
+          <div className={styles.tab}>
+            <img className={styles.tabimg} src="/img/login.svg" alt="tag"></img>
+            <a href="#dropLocation" onClick={handleClick}>
+              Drop your location
+            </a>
+          </div>
+        </a>
+
+        <a href="#donationDetails" onClick={handleClick}>
+          <div className={styles.tab}>
+            <img className={styles.tabimg} src="/img/login.svg" alt="tag"></img>
+            <a href="#donationDetails" onClick={handleClick}>
+              Donation Details
+            </a>
+          </div>
+        </a>
+
+        <a href="#schedulePickup" onClick={handleClick}>
+          <div className={styles.tab}>
+            <img className={styles.tabimg} src="/img/login.svg" alt="tag"></img>
+            <a href="#schedulePickup" onClick={handleClick}>
+              Schedule Pickup
+            </a>
+          </div>
+        </a>
+
+        <a href="#donorDetails" onClick={handleClick}>
+          <div className={styles.tab}>
+            <img className={styles.tabimg} src="/img/login.svg" alt="tag"></img>
+            <a href="#donorDetails" onClick={handleClick}>
+              Donor Details
+            </a>
+          </div>
+        </a>
+
+        <a href="#placeOrder" onClick={handleClick}>
         <div className={styles.tab}>
-          <a href="#donationDetails" onClick={handleClick}>
-            Donation Details
-          </a>
-        </div>
-        <div className={styles.tab}>
-          <a href="#schedulePickup" onClick={handleClick}>
-            Schedule Pickup
-          </a>
-        </div>
-        <div className={styles.tab}>
-          <a href="#donorDetails" onClick={handleClick}>
-            Donor Details
-          </a>
-        </div>
-        <div className={styles.tab}>
+          <img className={styles.tabimg} src="/img/login.svg" alt="tag"></img>
           <a href="#placeOrder" onClick={handleClick}>
             Place Order
           </a>
         </div>
+        </a>
+        
       </div>
+
       <form onSubmit={handleSubmit} noValidate>
         <div className={styles.paymentCard} id="paymentCard">
           <div className={`${styles.card} show`} id="dropLocation">
@@ -245,7 +265,7 @@ const Stuffs = (props) => {
               </a>
             )}
           </div>
-          <div className={styles.card} id="donorDetails">
+          <div className={`${styles.card} ${styles.card4}`} id="donorDetails">
             <h2>Please enter your details</h2>
             <input
               onChange={handleDonor}
