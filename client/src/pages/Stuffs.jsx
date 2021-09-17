@@ -74,6 +74,7 @@ const Stuffs = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     document.querySelector("#paymentCard").childNodes.forEach((card) => {
       card.classList.add("hide");
     });
@@ -97,33 +98,37 @@ const Stuffs = (props) => {
   return (
     <main className={styles.stuffs}>
       <div className={styles.navigation}>
-        {/* eslint-disable-next-line */}
-        <div className={`${styles.tab} ${styles.current}`}>
+        <div className={styles.tab}>
           <a href="#dropLocation" onClick={handleClick}>
             Drop your location
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#donationDetails" onClick={handleClick}>
             Donation Details
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#schedulePickup" onClick={handleClick}>
             Schedule Pickup
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#donorDetails" onClick={handleClick}>
             Donor Details
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#placeOrder" onClick={handleClick}>
             Place Order
           </a>
         </div>
       </div>
+
       <form onSubmit={handleSubmit} noValidate>
         <div className={styles.paymentCard} id="paymentCard">
           <div className={`${styles.card} show`} id="dropLocation">
