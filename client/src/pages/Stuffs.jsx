@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { GoogleComponent } from "react-google-location";
-import UserContext from "../context/user-context";
+
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import styles from "./css/Stuffs.module.css";
 
 const API_KEY_GOOGLE = process.env.REACT_APP_GOOGLE_API;
 
 const Stuffs = (props) => {
-  const userCtx = useContext(UserContext);
+  const { user } = useContext(AuthContext);
   const [location, setLocation] = useState(null);
 
   const [items, setItems] = useState({
@@ -20,9 +20,9 @@ const Stuffs = (props) => {
   const [date, setDate] = useState(0);
 
   const [donorDetails, setDonorDetails] = useState({
-    name: userCtx.name,
+    name: user.name,
     phone: "",
-    email: userCtx.email,
+    email: user.email,
   });
 
   useEffect(() => {
