@@ -14,7 +14,7 @@ const homelessRoutes = require("./routes/homeless");
 
 mongoose
   .connect(
-    `mongodb+srv://decodingApocalypse:${process.env.MONGODB_PASS}@aashroy.za9ce.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+    `mongodb+srv://decodingApocalypse:${process.env.MONGODB_PASS}@aashroy.za9ce.mongodb.net/aashroy?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("Database connected");
