@@ -23,6 +23,7 @@ const Report = lazy(() => import("./pages/Report"));
 const Upload = lazy(() => import("./pages/Upload"));
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
+const Profile = lazy(() => import("./pages/Profile"));
 const Logout = lazy(() => import("./pages/Logout"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const Error404 = lazy(() => import("./pages/Error404"));
@@ -92,6 +93,10 @@ function App() {
             ) : (
               <Logout title="Logging out | Aakanksha" />
             )}
+          </Route>
+
+          <Route exact path="/profile">
+            <Profile title="Profile | Aakanksha" />
           </Route>
 
           <Route exact path="/forgotpassword">
