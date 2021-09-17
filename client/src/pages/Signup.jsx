@@ -1,13 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/user-context";
+
+import { signupCall } from "../apiCalls";
+import { AuthContext } from "../context/AuthContext/AuthContext";
+
+import Loader from "../components/Loader";
 
 import styles from "./css/Signup.module.css";
 
 const Signup = (props) => {
-  const userCtx = useContext(UserContext);
+  // new
 
-  const isSignedIn = userCtx.successfull;
+  const { isFetching, error, dispatchAuthState } = useContext(AuthContext);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -20,45 +24,37 @@ const Signup = (props) => {
     document.title = props.title;
   }, [props.title]);
 
-  useEffect(() => {
-    userCtx.logOutUser();
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    if (isSignedIn) {
-      setTimeout(() => {
-        props.history.push("/");
-      }, 3000);
-    }
-  }, [isSignedIn, props.history]);
-
   const handleUserData = (e) => {
     setUserData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, passwordConf } = userData;
-    userCtx.signInUser(name, email, password, passwordConf);
+    signupCall({ name, email, password, passwordConf }, dispatchAuthState);
   };
 
   return (
     <main className={styles.signup}>
-      {!isSignedIn ? (
+      {isFetching ? (
+        <Loader />
+      ) : (
         <div className={styles.signupContainer}>
           <div className={styles.left}>
             <img src="/img/signup.svg" alt="Login" />
           </div>
           <div className={styles.right}>
             <h2>Sign In</h2>
-            {userCtx.successfull ? (
-              ""
+            {error ? (
+              error.message ? (
+                <p className={styles.errorMsg}>{error.message}</p>
+              ) : (
+                <p className={styles.errorMsg}>Error</p>
+              )
             ) : (
-              <p className={styles.errorMsg}>{userCtx.message}</p>
+              ""
             )}
             <form onSubmit={handleSubmit}>
               <input
@@ -87,6 +83,7 @@ const Signup = (props) => {
                 placeholder="Enter password"
                 className={styles.password}
                 required
+                minLength="8"
               />
               <input
                 type="password"
@@ -96,6 +93,7 @@ const Signup = (props) => {
                 placeholder="Confirm password"
                 className={styles.password}
                 required
+                minLength="8"
               />
               <button className={styles.loginBtn}>Signup</button>
             </form>
@@ -121,15 +119,6 @@ const Signup = (props) => {
               </span>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={styles.signedIn}>
-          <h2>You are logged in</h2>
-          <Link className={styles.homeBtn} to="/">
-            Visit Homepage
-          </Link>
-          <br />
-          <p>Or you will be redirected in 3 secs</p>
         </div>
       )}
     </main>
