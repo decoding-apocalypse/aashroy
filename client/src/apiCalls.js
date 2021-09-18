@@ -4,6 +4,10 @@ export const loginCall = async (userCredential, dispatch) => {
   dispatch({ type: "LOGIN_START" });
   try {
     const res = await axios.post("/users/login", userCredential);
+    if (res.data.message) {
+      dispatch({ type: "LOGIN_FAILURE", payload: res.data });
+      return;
+    }
     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
   } catch (err) {
     console.log(err);
@@ -45,12 +49,24 @@ export const signupCall = async (userCredential, dispatch) => {
     return;
   }
   try {
-    const res = await axios.post("/users/register", {
-      name,
-      password,
-      email,
-    });
-    dispatch({ type: "SIGNUP_SUCCESS", payload: res.data });
+    axios
+      .post("/users/register", {
+        name,
+        password,
+        passwordConf,
+        email,
+      })
+      .then((res) => {
+        if (res.data.message) {
+          dispatch({ type: "SIGNUP_FAILURE", payload: res.data });
+          return;
+        }
+        dispatch({ type: "SIGNUP_SUCCESS", payload: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch({ type: "SIGNUP_FAILURE", payload: err });
+      });
   } catch (err) {
     dispatch({ type: "SIGNUP_FAILURE", payload: err });
   }
@@ -58,7 +74,41 @@ export const signupCall = async (userCredential, dispatch) => {
 
 export const logoutCall = (userCredential, dispatch) => {
   dispatch({ type: "LOGOUT_START" });
-  setTimeout(() => {
-    dispatch({ type: "LOGOUT_SUCCESS" });
-  }, 1000);
+  axios
+    .post("/users/logout")
+    .then((res) => {
+      if (res.data.successfull) {
+        dispatch({ type: "LOGOUT_SUCCESS" });
+      } else {
+        dispatch({ type: "LOGOUT_FAILURE", payload: res.data.message });
+      }
+    })
+    .catch((err) => {
+      dispatch({ type: "LOGOUT_FAILURE", payload: err });
+    });
+};
+
+export const googleLoginCall = (userCredential, dispatch) => {
+  dispatch({ type: "GOOGLE_LOGIN_START" });
+  const { tokenId } = userCredential;
+  try {
+    // Login
+    axios
+      .post("/users/google", { tokenId })
+      .then((res) => {
+        if (res.data.message) {
+          dispatch({ type: "GOOGLE_LOGIN_FAILURE", payload: res.data });
+        }
+        dispatch({ type: "GOOGLE_LOGIN_SUCCESS", payload: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } catch (err) {
+    dispatch({ type: "GOOGLE_LOGIN_FAILURE", payload: err });
+  }
+};
+
+export const sessionLoginCall = (userCredential, dispatch) => {
+  dispatch({ type: "LOGIN_SUCCESS", payload: userCredential });
 };
