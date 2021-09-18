@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { loginCall } from "../apiCalls";
+import { googleLoginCall, loginCall } from "../apiCalls";
 import { AuthContext } from "../context/AuthContext/AuthContext";
+
+import { GoogleLogin } from "react-google-login";
 
 import Loader from "../components/Loader";
 import styles from "./css/Login.module.css";
@@ -33,7 +35,13 @@ const Login = (props) => {
     loginCall({ email, password }, dispatchAuthState);
   };
 
-  console.log(error);
+  const googleSuccess = (res) => {
+    googleLoginCall(res, dispatchAuthState);
+    // console.log(res);
+  };
+  const googleFailure = () => {
+    console.log("Failure :(");
+  };
 
   return (
     <main className={styles.login}>
@@ -53,7 +61,9 @@ const Login = (props) => {
               error.message ? (
                 <p className={styles.errorMsg}>{error.message}</p>
               ) : (
-                <p className={styles.errorMsg}>error</p>
+                <p className={styles.errorMsg}>
+                  Oops! Some internal error occured
+                </p>
               )
             ) : (
               ""
@@ -92,21 +102,22 @@ const Login = (props) => {
               </Link>
             </div>
             <div className={styles.externalLinks}>
-              <span className={styles.text}>or login using</span>
+              <span className={styles.text}>or login using Google Account</span>
               <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/google.png" alt="Google" />
-                </Link>
-              </span>
-              <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/facebook.png" alt="Facebook" />
-                </Link>
-              </span>
-              <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/linkedin.png" alt="LinkedIn" />
-                </Link>
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}
+                  render={(renderProps) => (
+                    <button
+                      onClick={renderProps.onClick}
+                      disabled={renderProps.disabled}
+                    >
+                      <img src="/img/icons/google.png" alt="Google" />
+                    </button>
+                  )}
+                  onSuccess={googleSuccess}
+                  onFailure={googleFailure}
+                  cookiePolicy="single_host_origin"
+                />
               </span>
             </div>
           </div>

@@ -70,7 +70,12 @@ const Navbar = (props) => {
             {user && (
               <Link id="profile" to="/profile">
                 <div className="user-img">
-                  <img src="/img/icons/user.png" alt={user.username} />
+                  <img
+                    src={
+                      user.profileImg ? user.profileImg : "/img/icons/user.png"
+                    }
+                    alt={user.username}
+                  />
                 </div>
                 <div className="user-details">
                   <p>{user.username}</p>
