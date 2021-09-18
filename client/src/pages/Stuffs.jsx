@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { GoogleComponent } from "react-google-location";
-import UserContext from "../context/user-context";
+
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import styles from "./css/Stuffs.module.css";
 
-const API_KEY_GOOGLE = "AIzaSyDtie1SmbFIOXlKF7zu1o9ZSPaBA4-JzwM";
+const API_KEY_GOOGLE = process.env.REACT_APP_GOOGLE_API;
 
 const Stuffs = (props) => {
-  const userCtx = useContext(UserContext);
+  const { user } = useContext(AuthContext);
   const [location, setLocation] = useState(null);
 
   const [items, setItems] = useState({
@@ -20,9 +20,9 @@ const Stuffs = (props) => {
   const [date, setDate] = useState(0);
 
   const [donorDetails, setDonorDetails] = useState({
-    name: userCtx.name,
+    name: user.name,
     phone: "",
-    email: userCtx.email,
+    email: user.email,
   });
 
   useEffect(() => {
@@ -74,6 +74,7 @@ const Stuffs = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     document.querySelector("#paymentCard").childNodes.forEach((card) => {
       card.classList.add("hide");
     });
@@ -97,33 +98,37 @@ const Stuffs = (props) => {
   return (
     <main className={styles.stuffs}>
       <div className={styles.navigation}>
-        {/* eslint-disable-next-line */}
-        <div className={`${styles.tab} ${styles.current}`}>
+        <div className={styles.tab}>
           <a href="#dropLocation" onClick={handleClick}>
             Drop your location
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#donationDetails" onClick={handleClick}>
             Donation Details
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#schedulePickup" onClick={handleClick}>
             Schedule Pickup
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#donorDetails" onClick={handleClick}>
             Donor Details
           </a>
         </div>
+
         <div className={styles.tab}>
           <a href="#placeOrder" onClick={handleClick}>
             Place Order
           </a>
         </div>
       </div>
+
       <form onSubmit={handleSubmit} noValidate>
         <div className={styles.paymentCard} id="paymentCard">
           <div className={`${styles.card} show`} id="dropLocation">
@@ -245,7 +250,7 @@ const Stuffs = (props) => {
               </a>
             )}
           </div>
-          <div className={styles.card} id="donorDetails">
+          <div className={`${styles.card} ${styles.card4}`} id="donorDetails">
             <h2>Please enter your details</h2>
             <input
               onChange={handleDonor}

@@ -1,15 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import styles from "./css/Donation.module.css";
 
 const Donation = (props) => {
+  const { user } = useContext(AuthContext);
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
   return (
     <main className={styles.Donation}>
       <h1 className="heading">Donation</h1>
+      {!user ? (
+        <p className={styles.msg}>You must Sign-Up/Login to donate</p>
+      ) : (
+        ""
+      )}
       <div className={styles.card}>
         <div className={styles.money}>
           <img src="/img/icons/money.png" alt="money" />
