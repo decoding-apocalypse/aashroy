@@ -1,19 +1,16 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/user-context";
+
+import { logoutCall } from "../apiCalls";
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import "./css/Navbar.css";
 
 const Navbar = (props) => {
-  const userCtx = useContext(UserContext);
-
-  const isLoggedIn = userCtx.successfull;
+  const { user, dispatchAuthState } = useContext(AuthContext);
 
   const handleLogout = () => {
-    const { email, password } = userCtx;
-    setTimeout(() => {
-      userCtx.logOutUser(email, password);
-    }, 2000);
+    logoutCall(user, dispatchAuthState);
   };
 
   return (
@@ -70,18 +67,18 @@ const Navbar = (props) => {
                 <span className="hover-anim">Developers</span>
               </Link>
             </li>
-            {isLoggedIn && (
+            {user && (
               <Link id="profile" to="/profile">
                 <div className="user-img">
-                  <img src="/img/icons/user.png" alt={userCtx.name} />
+                  <img src="/img/icons/user.png" alt={user.username} />
                 </div>
                 <div className="user-details">
-                  <p>{userCtx.name}</p>
+                  <p>{user.username}</p>
                 </div>
               </Link>
             )}
             <li className="nav-item" id="nav-btns">
-              {!isLoggedIn ? (
+              {!user ? (
                 <>
                   <Link to="/login">Log In</Link>
                   <Link to="/signup">Sign Up</Link>

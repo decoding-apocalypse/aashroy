@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-// import { Image } from "cloudinary-react";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Map from "../components/Map";
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import "./css/Upload.css";
 
@@ -12,6 +13,7 @@ const UploadDefaultState = {
 };
 
 const Upload = (props) => {
+  const { user } = useContext(AuthContext);
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
@@ -59,7 +61,7 @@ const Upload = (props) => {
       setUploadData((previousData) => ({
         ...previousData,
         imgUrl: resData.url,
-      }))
+      }));
       setUploadedFiles((old) => [...old, resData]);
     });
   };
@@ -67,31 +69,53 @@ const Upload = (props) => {
   const descripSelectedHandler = () => {
     setDescripSelected((event) => {
       console.log(event);
-    })
-  }
+    });
+  };
 
   return (
     <main>
       <h2>Please Select Location</h2>
-      <div id="location-map">{location && <Map location={location} onMapData={handelingMapData}/>}</div>
+      {!user ? (
+        <p className="uploadErrorMsg">You must Sign-Up/Login to Upload</p>
+      ) : (
+        ""
+      )}
+      <div id="location-map">
+        {location && <Map location={location} onMapData={handelingMapData} />}
+      </div>
       <div id="upload-img">
         <div id="upload-btn">
-          <input
-            id="file-type-inp"
-            type="file"
-            accept="image/*"
-            onChange={(event) => {
-              setImageSelected(event.target.files[0]);
-            }}
-          />
-          <label for="file-type-inp" id="file-type-inp-label">Choose a file</label>
-          <input id="text-type-inp" type="text" placeholder="description..." onChange={(event) => {
-            setDescripSelected(event);
-          }}/>
-          <button onClick={imageSelectedHandler}>
-            <img id="upload-img-btn" src="img/photo.png" alt="Upload"></img>{" "}
-            Upload
-          </button>
+          {user ? (
+            <>
+              <input
+                id="file-type-inp"
+                type="file"
+                accept="image/*"
+                onChange={(event) => {
+                  setImageSelected(event.target.files[0]);
+                }}
+              />
+              <label for="file-type-inp" id="file-type-inp-label">
+                Choose a file
+              </label>
+              <input
+                id="text-type-inp"
+                type="text"
+                placeholder="description..."
+                onChange={(event) => {
+                  setDescripSelected(event);
+                }}
+              />
+              <button onClick={imageSelectedHandler}>
+                <img id="upload-img-btn" src="img/photo.png" alt="Upload"></img>{" "}
+                Upload
+              </button>
+            </>
+          ) : (
+            <Link to="/signup" className="uploadSignupBtn">
+              Signup
+            </Link>
+          )}
         </div>
       </div>
     </main>
