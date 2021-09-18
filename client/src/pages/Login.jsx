@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/user-context";
 
+import { googleLoginCall, loginCall } from "../apiCalls";
+import { AuthContext } from "../context/AuthContext/AuthContext";
+
+import { GoogleLogin } from "react-google-login";
+
+import Loader from "../components/Loader";
 import styles from "./css/Login.module.css";
 
 const Login = (props) => {
-  const userCtx = useContext(UserContext);
-
-  const isLoggedIn = userCtx.successfull;
+  // new
+  const { isFetching, error, dispatchAuthState } = useContext(AuthContext);
 
   const [userData, setUserData] = useState({
     email: "",
@@ -17,19 +21,6 @@ const Login = (props) => {
   useEffect(() => {
     document.title = props.title;
   }, [props.title]);
-
-  useEffect(() => {
-    userCtx.logOutUser();
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    if (isLoggedIn) {
-      setTimeout(() => {
-        props.history.push("/");
-      }, 3000);
-    }
-  }, [isLoggedIn, props.history]);
 
   const handleUserInput = (e) => {
     setUserData((prevData) => ({
@@ -41,12 +32,22 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { email, password } = userData;
-    userCtx.logInUser(email, password);
+    loginCall({ email, password }, dispatchAuthState);
+  };
+
+  const googleSuccess = (res) => {
+    googleLoginCall(res, dispatchAuthState);
+    // console.log(res);
+  };
+  const googleFailure = () => {
+    console.log("Failure :(");
   };
 
   return (
     <main className={styles.login}>
-      {!isLoggedIn ? (
+      {isFetching ? (
+        <Loader />
+      ) : (
         <div className={styles.loginContainer}>
           <div className={styles.left}>
             <img src="/img/login.svg" alt="Login" />
@@ -56,10 +57,16 @@ const Login = (props) => {
           </div>
           <div className={styles.right}>
             <h2>Welcome Back</h2>
-            {userCtx.successfull ? (
-              ""
+            {error ? (
+              error.message ? (
+                <p className={styles.errorMsg}>{error.message}</p>
+              ) : (
+                <p className={styles.errorMsg}>
+                  Oops! Some internal error occured
+                </p>
+              )
             ) : (
-              <p className={styles.errorMsg}>{userCtx.message}</p>
+              ""
             )}
             <form onSubmit={handleSubmit}>
               <input
@@ -79,6 +86,7 @@ const Login = (props) => {
                 placeholder="Your password"
                 className={styles.password}
                 required
+                minLength="8"
               />
               <button className={styles.loginBtn}>Login</button>
             </form>
@@ -94,33 +102,25 @@ const Login = (props) => {
               </Link>
             </div>
             <div className={styles.externalLinks}>
-              <span className={styles.text}>or login using</span>
+              <span className={styles.text}>or login using Google Account</span>
               <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/google.png" alt="Google" />
-                </Link>
-              </span>
-              <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/facebook.png" alt="Facebook" />
-                </Link>
-              </span>
-              <span className={styles.icons}>
-                <Link to="/login">
-                  <img src="/img/icons/linkedin.png" alt="LinkedIn" />
-                </Link>
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}
+                  render={(renderProps) => (
+                    <button
+                      onClick={renderProps.onClick}
+                      disabled={renderProps.disabled}
+                    >
+                      <img src="/img/icons/google.png" alt="Google" />
+                    </button>
+                  )}
+                  onSuccess={googleSuccess}
+                  onFailure={googleFailure}
+                  cookiePolicy="single_host_origin"
+                />
               </span>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={styles.loggedIn}>
-          <h2>You are logged in</h2>
-          <Link className={styles.homeBtn} to="/">
-            Visit Homepage
-          </Link>
-          <br />
-          <p>Or you will be redirected in 3 secs</p>
         </div>
       )}
     </main>

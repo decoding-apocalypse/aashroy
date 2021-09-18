@@ -1,13 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../context/user-context";
+
+import { googleLoginCall, signupCall } from "../apiCalls";
+import { AuthContext } from "../context/AuthContext/AuthContext";
+
+import Loader from "../components/Loader";
 
 import styles from "./css/Signup.module.css";
+import { GoogleLogin } from "react-google-login";
 
 const Signup = (props) => {
-  const userCtx = useContext(UserContext);
+  // new
 
-  const isSignedIn = userCtx.successfull;
+  const { isFetching, error, dispatchAuthState } = useContext(AuthContext);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -20,45 +25,47 @@ const Signup = (props) => {
     document.title = props.title;
   }, [props.title]);
 
-  useEffect(() => {
-    userCtx.logOutUser();
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    if (isSignedIn) {
-      setTimeout(() => {
-        props.history.push("/");
-      }, 3000);
-    }
-  }, [isSignedIn, props.history]);
-
   const handleUserData = (e) => {
     setUserData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, passwordConf } = userData;
-    userCtx.signInUser(name, email, password, passwordConf);
+    signupCall({ name, email, password, passwordConf }, dispatchAuthState);
+  };
+
+  const googleSuccess = (res) => {
+    googleLoginCall(res, dispatchAuthState);
+    // console.log(res);
+  };
+  const googleFailure = () => {
+    console.log("Failure :(");
   };
 
   return (
     <main className={styles.signup}>
-      {!isSignedIn ? (
+      {isFetching ? (
+        <Loader />
+      ) : (
         <div className={styles.signupContainer}>
           <div className={styles.left}>
             <img src="/img/signup.svg" alt="Login" />
           </div>
           <div className={styles.right}>
             <h2>Sign In</h2>
-            {userCtx.successfull ? (
-              ""
+            {error ? (
+              error.message ? (
+                <p className={styles.errorMsg}>{error.message}</p>
+              ) : (
+                <p className={styles.errorMsg}>
+                  Oops! Some internal error occured
+                </p>
+              )
             ) : (
-              <p className={styles.errorMsg}>{userCtx.message}</p>
+              ""
             )}
             <form onSubmit={handleSubmit}>
               <input
@@ -87,6 +94,7 @@ const Signup = (props) => {
                 placeholder="Enter password"
                 className={styles.password}
                 required
+                minLength="8"
               />
               <input
                 type="password"
@@ -96,6 +104,7 @@ const Signup = (props) => {
                 placeholder="Confirm password"
                 className={styles.password}
                 required
+                minLength="8"
               />
               <button className={styles.loginBtn}>Signup</button>
             </form>
@@ -103,33 +112,27 @@ const Signup = (props) => {
               Already signup? <Link to="/login">Login</Link>
             </p>
             <div className={styles.externalLinks}>
-              <span className={styles.text}>or signup using</span>
-              <span className={styles.icons}>
-                <Link to="/signup">
-                  <img src="/img/icons/google.png" alt="Google" />
-                </Link>
+              <span className={styles.text}>
+                or signup using your Google Account
               </span>
               <span className={styles.icons}>
-                <Link to="/signup">
-                  <img src="/img/icons/facebook.png" alt="Facebook" />
-                </Link>
-              </span>
-              <span className={styles.icons}>
-                <Link to="/signup">
-                  <img src="/img/icons/linkedin.png" alt="LinkedIn" />
-                </Link>
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}
+                  render={(renderProps) => (
+                    <button
+                      onClick={renderProps.onClick}
+                      disabled={renderProps.disabled}
+                    >
+                      <img src="/img/icons/google.png" alt="Google" />
+                    </button>
+                  )}
+                  onSuccess={googleSuccess}
+                  onFailure={googleFailure}
+                  cookiePolicy="single_host_origin"
+                />
               </span>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={styles.signedIn}>
-          <h2>You are logged in</h2>
-          <Link className={styles.homeBtn} to="/">
-            Visit Homepage
-          </Link>
-          <br />
-          <p>Or you will be redirected in 3 secs</p>
         </div>
       )}
     </main>

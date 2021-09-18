@@ -1,22 +1,17 @@
-import React, { useContext, useEffect } from "react";
-import UserContext from "../context/user-context";
+import React, { useContext } from "react";
+import { Redirect } from "react-router";
+
+import { AuthContext } from "../context/AuthContext/AuthContext";
 
 import styles from "./css/Logout.module.css";
 
 const Logout = (props) => {
-  const userCtx = useContext(UserContext);
-  useEffect(() => {
-    setTimeout(() => {
-      props.history.push("/");
-    }, 2000);
-  }, [props.history]);
+  const { isFetching } = useContext(AuthContext);
 
   return (
     <main className={styles.logout}>
-      <h1>
-        {userCtx.successfull ? "Logging you out" : "You are already logged out"}
-      </h1>
-      {userCtx.successfull ? (
+      <h1>{isFetching ? "Logging you out" : "You are already logged out"}</h1>
+      {isFetching ? (
         <>
           <p>Please visit out website again</p>
           <div>
@@ -48,7 +43,7 @@ const Logout = (props) => {
           </div>
         </>
       ) : (
-        ""
+        <Redirect to="/" />
       )}
     </main>
   );

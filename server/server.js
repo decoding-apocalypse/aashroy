@@ -3,8 +3,11 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const PORT = process.env.port || 8800;
 
 // Routes imports
@@ -26,6 +29,25 @@ mongoose
 // middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(
+  cors({
+    origin: true,
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
+app.use(
+  session({
+    key: "userId",
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      expires: 60 * 60 * 24,
+    },
+  })
+);
 app.use(helmet());
 app.use(morgan("common"));
 
