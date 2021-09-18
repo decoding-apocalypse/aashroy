@@ -33,7 +33,22 @@ export const LogoutStart = (userCredentials) => ({
 export const LogoutSuccess = () => ({
   type: "LOGOUT_SUCCESS",
 });
+
 export const LogoutStart = (error) => ({
   type: "LOGOUT_FAILURE",
+  payload: error,
+});
+
+export const GoogleLoginStart = (userCredentials) => ({
+  type: "GOOGLE_LOGIN_START",
+});
+
+export const GoogleLoginSuccess = (user) => ({
+  type: "GOOGLE_LOGIN_SUCCESS",
+  payload: user,
+});
+
+export const GoogleLoginFailure = (error) => ({
+  type: "GOOGLE_LOGIN_FAILURE",
   payload: error,
 });

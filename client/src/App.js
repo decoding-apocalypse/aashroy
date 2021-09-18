@@ -1,5 +1,5 @@
 // React imports
-import React, { Suspense, lazy, useContext } from "react";
+import React, { Suspense, lazy, useContext, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // Style Imports
@@ -10,6 +10,9 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { AuthContext } from "./context/AuthContext/AuthContext";
+
+import axios from "axios";
+import { sessionLoginCall } from "./apiCalls";
 
 // Pages imports
 const Home = lazy(() => import("./pages/Home"));
@@ -29,7 +32,18 @@ const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
-  const { user } = useContext(AuthContext);
+  axios.defaults.withCredentials = true;
+  const { user, dispatchAuthState } = useContext(AuthContext);
+  useEffect(() => {
+    axios
+      .get("/users/login")
+      .then((res) => {
+        if (res.data.isLoggedIn) {
+          sessionLoginCall(res.data.user, dispatchAuthState);
+        }
+      })
+      .catch();
+  }, [dispatchAuthState]);
   return (
     <Suspense fallback={<Loader />}>
       <div className="App">

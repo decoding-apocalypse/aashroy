@@ -42,12 +42,12 @@ const Map = (props) => {
     });
     setSelected(null);
     props.onMapData(event.latLng.lat(), event.latLng.lng());
-  }, []);
+  }, [props]);
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
-  });
+  },[]);
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";

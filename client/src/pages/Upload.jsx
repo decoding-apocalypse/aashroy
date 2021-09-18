@@ -33,8 +33,11 @@ const Upload = (props) => {
   }, []);
 
   const url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+  // eslint-disable-next-line
   const [imageSelected, setImageSelected] = useState([]);
+  // eslint-disable-next-line
   const [description, setDescripSelected] = useState();
+  // eslint-disable-next-line
   const [uploadFiles, setUploadedFiles] = useState([]);
   const [uploadData, setUploadData] = useState(UploadDefaultState);
 
@@ -66,6 +69,7 @@ const Upload = (props) => {
     });
   };
 
+  // eslint-disable-next-line
   const descripSelectedHandler = () => {
     setDescripSelected((event) => {
       console.log(event);
