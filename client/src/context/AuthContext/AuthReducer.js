@@ -54,6 +54,25 @@ const AuthReducer = (state, action) => {
         isFetching: false,
         error: action.payload,
       };
+
+    case "GOOGLE_LOGIN_START":
+      return {
+        user: null,
+        isFetching: true,
+        error: null,
+      };
+    case "GOOGLE_LOGIN_SUCCESS":
+      return {
+        user: action.payload,
+        isFetching: false,
+        error: null,
+      };
+    case "GOOGLE_LOGIN_FAILURE":
+      return {
+        user: null,
+        isFetching: false,
+        error: action.payload,
+      };
     default:
       return state;
   }
