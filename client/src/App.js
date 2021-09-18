@@ -26,6 +26,7 @@ const Signup = lazy(() => import("./pages/Signup"));
 const Profile = lazy(() => import("./pages/Profile"));
 const Logout = lazy(() => import("./pages/Logout"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
+const EditProfile = lazy(() => import("./pages/EditProfile"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
             <Upload title="Upload | Aakanksha" />
           </Route>
 
+
           <Route exact path="/login">
             {user ? <Redirect to="/" /> : <Login title="Login | Aakanksha" />}
           </Route>
@@ -103,9 +105,14 @@ function App() {
             <ForgotPassword title="Forgot Password | Aakanksha" />
           </Route>
 
+          <Route exact path="/edit">
+            <EditProfile title="EditProfile | Aakanksha" />
+          </Route>
+
           <Route path="/">
             <Error404 title="Oops Error | Aakanksha" />
           </Route>
+
         </Switch>
         <Footer />
       </div>
