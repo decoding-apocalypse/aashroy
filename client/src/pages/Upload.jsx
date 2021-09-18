@@ -41,7 +41,8 @@ const Upload = (props) => {
   const [uploadFiles, setUploadedFiles] = useState([]);
   const [uploadData, setUploadData] = useState(UploadDefaultState);
 
-  console.log(uploadData);
+  // console.log(uploadData);
+  // console.log(imageSelected);
 
   const handelingMapData = (lat, lng) => {
     setUploadData((previousData) => ({
@@ -99,9 +100,12 @@ const Upload = (props) => {
                   setImageSelected(event.target.files[0]);
                 }}
               />
-              <label for="file-type-inp" id="file-type-inp-label">
+              <label htmlFor="file-type-inp" id="file-type-inp-label">
                 Choose a file
               </label>
+              <div id="chooseFile">
+                <div>Choosen file: {imageSelected.name == null ? "none" : imageSelected.name}</div>
+              </div>
               <input
                 id="text-type-inp"
                 type="text"
